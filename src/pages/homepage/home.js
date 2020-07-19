@@ -1,14 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './home.css';
 
-function App() {
+import SampleMerchant from '../sample_merchant-page/test'
+
+export default function Home() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          THIS IS THAI, DONT TOUCH!
+          THIS IS THAI, YOU CAN TOUCH NOW!!
         </p>
         <a
           className="App-link"
@@ -18,9 +18,8 @@ function App() {
         >
           Learn React
         </a>
+        <SampleMerchant />
       </header>
     </div>
   );
 }
-
-export default App;
