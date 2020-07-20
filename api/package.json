@@ -1,0 +1,31 @@
+{
+  "name": "ibm-scholars",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cross-env": "^7.0.2",
+    "inquirer": "^7.3.2",
+    "pg": "^8.3.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "init-table": "node initAPI.js",
+    "deploy": "rm -rf ./build && npm run build && cf push -f manifest.yml"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
