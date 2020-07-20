@@ -16,8 +16,7 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "npm run server && react-scripts start",
-    "fontend": "react-scripts start",
+    "start": "react-scripts start",
     "server": "node ./api/server.js",
     "init-table": "node ./api/initAPI.js",
     "build": "react-scripts build",
