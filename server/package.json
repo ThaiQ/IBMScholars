@@ -1,0 +1,55 @@
+{
+  "name": "nodejsexpressapp",
+  "version": "1.0.0",
+  "description": "Start building your next Node.js Express app on IBM Cloud.",
+  "private": true,
+  "engines": {
+    "node": "^12.0.0"
+  },
+  "scripts": {
+    "dev": "nodemon server/server.js",
+    "start": "node server/server.js",
+    "deploy": "cf push -f manifest.yml",
+    "build-deploy": "bx dev deploy"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test && npm run check-coverage"
+    }
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "exclude": [
+      "test"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "ibm-cloud-env": "^0",
+    "pg": "^8.3.0",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.4.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "husky": "^4.2.5",
+    "mocha": "^8.0.1",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.1.0",
+    "sinon": "^9.0.2",
+    "sinon-chai": "^3.5.0",
+    "supertest": "^4.0.2"
+  }
+}
