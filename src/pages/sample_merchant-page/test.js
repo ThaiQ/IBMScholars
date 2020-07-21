@@ -6,7 +6,6 @@ export default function Mer(props) {
   const [merchants, setMerchants] = useState([]);
   useEffect(() => {
     getMerchant();
-    console.log(base_URL)
   }, []);
 
   function getMerchant() {

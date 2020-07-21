@@ -10,5 +10,5 @@ applications:
   memory: 128MB
   name: NodeServer-IBMScholars
   routes:
-  - route: ibm-scholar-server.us-south.cf.appdomain.cloud
+  - route: ibm-scholars-server.us-south.cf.appdomain.cloud
   timeout: 180
