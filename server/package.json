@@ -7,7 +7,8 @@
     "node": "^12.0.0"
   },
   "scripts": {
-    "dev": "nodemon server/server.js",
+    "add-tables": "node server/init-tables/add-tables.js",
+    "remove-tables": "node server/init-tables/remove-tables.js",
     "start": "node server/server.js",
     "deploy": "cf push -f manifest.yml",
     "build-deploy": "bx dev deploy"

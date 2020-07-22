@@ -3,13 +3,26 @@ const connectionString = 'postgres://shtuunao:mtYbRa79klkaCaOO_wiI5wLG1FsjmOIP@h
 const base_URL = process.env.NODE_ENV === 'production' ?
 'https://ibm-goodtechscholars.mybluemix.net' : 'http://localhost:3000'
 
+//init pstgresSQL
 const pool = new Pool({
   connectionString: connectionString,
 })
 const client = new Client({
     connectionString: connectionString,
-  })
+})
 
+/**
+ * INIT TABLE HERE!!!!
+ * Don't forget to run 'npm run add-tables'
+ * or 'npm run remove-tables'
+ */
+const {merchantTable, merchantName} = require('./merchants/table')
+//Add tables into this array
+const tables = [merchantTable]
+//Add name of tables into this array
+const tableNames = [merchantName]
+
+//Init express
 const express = require('express')
 const app = express()
 app.use(express.json())
@@ -27,5 +40,8 @@ module.exports = {
     express,
     app,
     port,
-    base_URL
+    base_URL,
+    tables,
+    tableNames
   };
+  

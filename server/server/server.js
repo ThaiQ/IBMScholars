@@ -1,8 +1,8 @@
 // import dependencies and initialize express
 const path = require('path');
 const bodyParser = require('body-parser');
-const healthRoutes = require('./routes/health-route');
-const swaggerRoutes = require('./routes/swagger-route');
+const healthRoutes = require('./controllers/health-route');
+const swaggerRoutes = require('./config/swagger-route');
 const {app} = require('./constants')
 
 //Import routes
@@ -18,7 +18,7 @@ app.use('/swagger', swaggerRoutes);
 
 // default path to serve up index.html (single page application)
 app.all('', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, '../public', 'index.html'));
+  res.status(200).send('UP');
 });
 
 // start node server
