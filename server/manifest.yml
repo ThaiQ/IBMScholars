@@ -1,0 +1,14 @@
+applications:
+- buildpack: sdk-for-nodejs
+  command: npm start
+  disk_quota: 1G
+  domain: null
+  env:
+    OPTIMIZE_MEMORY: true
+  host: null
+  instances: 1
+  memory: 128MB
+  name: NodeServer-IBMScholars
+  routes:
+  - route: ibm-scholars-server.us-south.cf.appdomain.cloud
+  timeout: 180

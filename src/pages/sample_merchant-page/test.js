@@ -1,14 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+const {base_URL} = require('../../const')
 
-export default function Mer() {
+export default function Mer(props) {
   const [merchants, setMerchants] = useState([]);
   useEffect(() => {
     getMerchant();
   }, []);
 
   function getMerchant() {
-   axios.get('http://localhost:3001/get')
+   axios.get(base_URL+'/get')
     .then(result=>{setMerchants(result.data)})
     .catch((err)=>{console.log(err)})
   }
@@ -20,14 +21,14 @@ export default function Mer() {
       name: name,
       email: email
     }
-    axios.post('http://localhost:3001/createMerchants',obj)
+    axios.post(base_URL+'/createMerchants',obj)
     .then(()=>{getMerchant()})
     .catch((err)=>{console.log(err)})
   }
   
   function deleteMerchant() {
     let name = prompt('Enter merchant name');
-    axios.post('http://localhost:3001/deleteMerchant',{name:name})
+    axios.post(base_URL+'/deleteMerchant',{name:name})
     .then(()=>{getMerchant()})
     .catch((err)=>{console.log(err)})
   }

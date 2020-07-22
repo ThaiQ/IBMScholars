@@ -17,12 +17,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "server": "node ./api/server.js",
-    "init-table": "node ./api/initAPI.js",
+    "server": "npm start --prefix server",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "rm -rf ./build && npm run build && cf push -f manifest.yml"
+    "deploy-frontend": "rm -rf ./build && npm run build && cf push -f manifest.yml",
+    "deploy-server": "npm run deploy --prefix server",
+    "deploy-build-server": "npm run build-deploy --prefix server",
+    "add-tables": "npm run add-tables --prefix server",
+    "remove-tables": "npm run remove-tables --prefix server"
   },
   "eslintConfig": {
     "extends": "react-app"
