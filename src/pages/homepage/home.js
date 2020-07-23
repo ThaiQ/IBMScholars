@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './home.css';
 import {Grid, Cell} from 'react-mdl'
+import titlePage from './pictures/titlePage.png'
 
 
 // export default function Home() {
@@ -20,15 +21,17 @@ class home extends Component{
         <Grid className = "landing-grid">
           <Cell col={12}>
             <img
-            src="https://lh3.googleusercontent.com/proxy/OxTanxC8f6oEfxLrntPb2VnLzTdnFRFdnwx_0Jqmu_l1npmTk4K9wkrRsaXvKrHfbIM52s7rlzs-N7kIxrc4RnVdqapWvdAbGasgCYA"
-            alt="homepage"
+            src={titlePage}
             className="homepage-img"
             />
             <div className = "banner-text">
-              <h1>Baby Steps Education</h1>
+              <h1>About Us</h1>
             <hr/>
-            <p>
-              Enter info about the org here. 
+            <p className = 'lead text-center'> 
+            {' '}
+            Every child deseverves the same opportunities. Our program hopes to give low-income elementary school kids with disabilities, 
+            a personalized service which teaches them primary school topics geared to fit their needs. Our platform is about creating a community 
+            for these students. 
             </p>
             </div>
           </Cell>
