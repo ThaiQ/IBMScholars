@@ -40,6 +40,10 @@ export default function Mer(props) {
       <button onClick={createMerchant}>Add merchant</button>
       <br />
       <button onClick={deleteMerchant}>Delete merchant</button>
+      <audio controls>
+        <source src={base_URL+'/mp3/test'} type="audio/mpeg"/>
+        Your browser does not support the audio tag.
+      </audio>
     </div>
   );
 }
