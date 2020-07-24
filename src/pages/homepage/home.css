@@ -11,7 +11,7 @@
 
 .homepage-img{
   height: 500px;
-  width: 100%;
+  width: 85%;
   padding-top: 5pm;
 }
 
@@ -19,7 +19,7 @@
   background-color:rgb(250, 248, 148);
   height: 300px;
   opacity:1;
-  width: 75%;
+  width: 100%;
   margin:auto;
   border-radius:30px;
 }
