@@ -1,0 +1,23 @@
+[
+    {
+        "letter": "A",
+        "image": "https://i.imgur.com/afw4QTR.png",
+        "word": "Apple",
+        "letterSound": "../sounds/jjucvgut.mp3",
+        "wordSound": "Wsound"
+    },
+    {
+        "letter": "B",
+        "image": "https://i.imgur.com/lKcpdPX.png",
+        "word": "Banana",
+        "letterSound": "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3",
+        "wordSound": "Wsound"
+    },
+    {
+        "letter": "C",
+        "image": "https://i.imgur.com/1D5ZtxD.png",
+        "word": "Cat",
+        "letterSound": "https://a.clyp.it/jjucvgut.mp3",
+        "wordSound": "Wsound"
+    }
+]
