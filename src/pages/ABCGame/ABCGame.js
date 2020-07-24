@@ -5,8 +5,7 @@ import alphabets from './alphabets.json'
 import classNames from 'classnames';
 import UIfx from 'uifx';
 import btnSound from "../sounds/state-change_confirm-up.wav";
-import Sound from 'react-sound';
-import UIFx from "uifx";
+
 //import LAudio from '../sounds/jjucvgut.mp3';
 
 class ABCGame extends Component {

@@ -60,7 +60,7 @@
 }
 
 .letter-image{
-    width: 200px;
+    width: 600px;
     height: 200px;
     padding-left: 50%;
 }
@@ -123,6 +123,8 @@
 }
 
 .prev, .next, .sound{
+    color: black !important;
+    width: 250px;
     padding-left: 10px;
     padding-right: 10px;
 }
