@@ -21,6 +21,7 @@
     "start": "react-scripts start",
     "server": "npm start --prefix server",
     "build": "react-scripts build",
+    "install-server": "npm install --prefix server",
     "deploy-frontend": "rm -rf ./build && npm run build && cf push -f manifest.yml",
     "deploy-server": "npm run deploy --prefix server",
     "deploy-build-server": "npm run build-deploy --prefix server",

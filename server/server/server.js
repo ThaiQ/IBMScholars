@@ -7,6 +7,7 @@ const {app} = require('./constants')
 
 //Import routes
 require('./merchants/routes') //Example merchants routes
+require('./mp3/routes')
 
 // enable parsing of http request body
 app.use(bodyParser.urlencoded({ extended: false }));
