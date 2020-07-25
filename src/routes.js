@@ -9,6 +9,7 @@ import ABCGame2 from './pages/games/ABCGame2/ABCGame2';
 import Forum from './pages/forum/forum';
 import SignUp from './pages/SignUp/signUp';
 import Login from './pages/Login/login';
+import Lesson from './pages/practicepage/practice'
 
 export default function Routes(props) {
 
