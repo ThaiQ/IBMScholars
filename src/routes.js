@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/homepage/home'
+import Lesson from './pages/practicepage/practice'
 
 export default function Routes(props) {
 
@@ -9,6 +10,10 @@ export default function Routes(props) {
         {
             path: '/',
             component: Home
+        },
+        {
+            path: '/lesson',
+            component: Lesson
         }
     ]
 
