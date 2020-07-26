@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/homepage/home'
-import ABCGame from './pages/ABCGame/ABCGame';
+import ABCLesson from './pages/ABCLesson/ABCLesson';
 
 export default function Routes(props) {
 
@@ -9,8 +9,8 @@ export default function Routes(props) {
     const routes = [
         {
             path: '/',
-            // component: Home, ABCGame
-            component: ABCGame
+            // component: Home, ABCLesson
+            component: ABCLesson
         }
     ]
 

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import './ABCGame.css';
+import './ABCLesson.css';
 import { Button, Container, Input, Label, Col } from 'reactstrap';
 import alphabets from './alphabets.json'
 import classNames from 'classnames';
 import UIfx from 'uifx';
 import btnSound from "../sounds/state-change_confirm-up.wav";
+const { base_URL } = require('../../const')
 
 //import LAudio from '../sounds/jjucvgut.mp3';
 
@@ -16,35 +17,58 @@ class ABCGame extends Component {
             alphabets: alphabets,
             currentPosition: 0,
             alphaTick: 0,
-            audioVal: 0,
+            audioVal: '',
+            audioInt: 0,
+            audioPath: '',
+            audioLetter: ['a', 'b', 'c'],
         };
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
+        this.playSound = this.playSound.bind(this);
+
     }
 
-    playSound() {
-        //const tick = new UIfx({ asset: LAudio });
-        //tick.setVolume(0.8);
-        //tick.play();
+    playSound = () => {
+
         console.log("playing..");
+        console.log(this.state.currentPosition);
+        this.setState({ audioVal: this.state.alphabets[this.state.currentPosition].letterSound },
+            () => {
+                this.audio = new Audio(base_URL + '/mp3/' + this.state.audioVal);
+                this.audio.load();
+                this.audio.play();
+            }
+        );
+
+
+        //base_URL + '/mp3/' + this.state.audioLetter[this.state.currentPosition]
+    }
+
+    componentDidMount() {
+        this.setState({ audioVal: this.state.alphabets[this.state.currentPosition].letterSound });
     }
 
     next() {
-        console.log('next button clicked');
-        const nSound = new UIfx(btnSound);
-        nSound.play();
         if (this.state.alphaTick < 2) {
-            this.setState({ alphaTick: this.state.alphaTick + 1 });
+            this.setState({ alphaTick: this.state.alphaTick + 1, currentPosition: this.state.currentPosition });
         }
         else {
             this.setState({ currentPosition: this.state.currentPosition + 1, alphaTick: 0 });
         }
+        console.log('next button clicked');
+        const nSound = new UIfx(btnSound);
+        nSound.play();
+        console.log(this.state.currentPosition);
+        this.setState({ audioPath: base_URL + '/mp3/' + this.state.audioLetter[this.state.currentPosition] });
+        console.log(this.state.audioPath);
+        //this.setState({ audioVal: this.state.alphabets[this.state.currentPosition].letterSound });
+        //console.log(this.state.audioVal);
+
     }
 
     previous() {
         console.log('previous button clicked');
-        const pSound = new UIfx(btnSound);
-        pSound.play();
+
         if (this.state.alphaTick <= 2 && this.state.alphaTick !== 0) {
             this.setState({ alphaTick: this.state.alphaTick - 1 });
         }
@@ -56,13 +80,14 @@ class ABCGame extends Component {
         }
     }
 
+
+
     render() {
         let showImage = this.state.alphaTick !== 0 ? true : false;
         let showWord = this.state.alphaTick === 2 ? true : false;
         const tick = new UIfx(this.state.alphabets[this.state.currentPosition].letterSound);
         tick.setVolume(0.8);
-        console.log("playing..");
-        console.log(this.state.alphabets[this.state.currentPosition].letterSound);
+
         return (
             <div className="game">
                 <div className="option">
@@ -73,8 +98,17 @@ class ABCGame extends Component {
                     </div>
                     <div className="buttons">
                         <a onClick={this.previous} className="button prev">Previous</a>
-                        <a onClick={() => tick.play()} className="button sound">Play Sound Again</a>
+                        <a onClick={this.playSound} className="button sound">Play Sound Again
+                        <img className="icon" src="https://i.imgur.com/CwFQpwq.png" /></a>
+                        {/* <a onClick={() => tick.play()} className="button sound">Play Sound Again</a> */}
                         <a onClick={this.next} className="button next">Next!</a>
+
+                    </div>
+                    <div className="audio">
+                        <audio controls>
+                            <source src={this.state.audioPath} type="audio/mp3" />
+                                Your browser does not support the audio tag.
+                        </audio>
                     </div>
                     <div className="fields">
                         <div className="field-block">
@@ -93,7 +127,9 @@ class ABCGame extends Component {
                         </div>
                     </div>
                 </div>
+
             </div>
+
         );
 
     }

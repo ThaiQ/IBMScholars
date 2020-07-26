@@ -6,7 +6,7 @@
     background-color: #9c6176;
     padding: 20px;
     width: auto;
-    min-height: 60%;
+    /* height: 800px; */
     position: relative;
 }
 
@@ -20,11 +20,14 @@
     justify-content: flex-start;
     align-items: stretch;
     flex:1;
+    width: auto;
 }
 
 .field-block{
     display: flex;
     min-height: 240px;
+    width: auto;
+    height: 350px;
     padding: 1%;
     flex-direction: row;
     justify-content: center;
@@ -48,8 +51,10 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    padding-left: 10px;
+    padding-left: 0px;
+    padding-top: 100px;
 }
+
 
 .placeholder-span{
     position: relative;
@@ -61,7 +66,7 @@
 
 .letter-image{
     width: 600px;
-    height: 200px;
+    /* max-height: 200px; */
     padding-left: 50%;
 }
 
@@ -82,16 +87,17 @@
     flex: 0 0 auto;
     border-radius: 4px;
     background-color: #2fcaaa;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.05), 0 2px 12px 0 rgba(0,0,0,.1);
-    transition: box-shadow 200ms ease-out;
+    box-shadow: 0 1px 3px 0px rgba(180, 101, 101, 0.05), 0 2px 12px 0px rgba(0,0,0,.1);
+    transition: 200ms ease-out;
     color: rgb(5, 0, 0);
     font-weight: 500;
     text-align: center;
     cursor: pointer;
     margin-left: 10px;
     margin-right: 10px;
-
 }
+  
+
 
 .button{
     margin-top: 10px;
@@ -99,6 +105,12 @@
     margin-left: 10px;
     margin-right: 10px;
     font-size: 1rem;
+}
+
+.icon{
+    order: 1;
+    width: 20px;
+    margin-left: 0.5rem;
 }
 
 .prev{
@@ -110,6 +122,18 @@
 .sound{
     padding-left: 10%;
     padding-right: 10%;
+}
+
+
+.audio{
+    height: 10vh; /* Magic here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+audio{
+    filter: sepia(100%) saturate(400%) grayscale(0) contrast(200%) hue-rotate(49deg) invert(12%);
 }
 
 .next{
