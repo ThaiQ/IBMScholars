@@ -17,10 +17,11 @@ const client = new Client({
  * or 'npm run remove-tables'
  */
 const {merchantTable, merchantName} = require('./merchants/table')
+const {rewardTable, rewardName} = require('./rewards/table')
 //Add tables into this array
-const tables = [merchantTable]
+const tables = [merchantTable, rewardTable]
 //Add name of tables into this array
-const tableNames = [merchantName]
+const tableNames = [merchantName, rewardName]
 
 //Init express
 const express = require('express')
