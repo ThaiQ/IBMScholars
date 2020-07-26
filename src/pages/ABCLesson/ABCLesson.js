@@ -104,12 +104,7 @@ class ABCGame extends Component {
                         <a onClick={this.next} className="button next">Next!</a>
 
                     </div>
-                    <div className="audio">
-                        <audio controls>
-                            <source src={this.state.audioPath} type="audio/mp3" />
-                                Your browser does not support the audio tag.
-                        </audio>
-                    </div>
+
                     <div className="fields">
                         <div className="field-block">
                             <div className="left-field">
