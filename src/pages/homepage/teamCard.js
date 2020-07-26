@@ -1,63 +1,28 @@
 import React from 'react';
-import {CardHeader, CardImg, Card} from 'reactstrap';
-import mock from '../homepage/pictures/mock.jpg';
+import {CardImg, Card, CardBody, CardTitle, CardText} from 'reactstrap';
+
+import './teamCard.css';
 
 
-export default class teamCard extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      activeTab: '1',
-
-      creators: [
-        {
-          name: 'Nanar Boursalian',
-          Linkedin:'https://www.google.com/',
-          pic: mock 
-        },
-        {
-          name: 'Seema Vora',
-          Linkedin:'https://www.google.com/',
-          pic: mock 
-        },
-        {
-          name: 'Thai Quach',
-          Linkedin:'https://www.google.com/',
-          pic: mock 
-        },
-        {
-          name: 'Surabhi Gupta',
-          Linkedin:'https://www.google.com/',
-          pic: mock 
-        },
-        {
-          name: 'Annabel Kusumo',
-          Linkedin:'https://www.google.com/',
-          pic: mock 
-        }
-      ]
-    };
-  }
-
+class TeamCard extends React.Component {
   render() {
     return (
-      <teamCard>
+   
+        <div className = 'card-wrapper'>
+      <Card >
+        <CardImg className = 'pic-dim'src={this.props.creators.pic} alt="Card image cap" />
+        <CardBody>
+          <CardTitle>{this.props.creators.name}</CardTitle>
+          <CardText font-size = '50%'>B.S. Software Engineering at SJSU</CardText>
+          <a href={this.props.creators.Linkedin}><i class="fa fa-linkedin"></i></a>
+        </CardBody>
+      </Card>
+    </div>
 
-        <div className='about-me'>
-          {this.state.creators.map((member, ind) =>(
-            <div className = 'card-wrapper'>
-              <Card outline color = "warning" className = 'sep-card' key = {ind}>
-              <CardHeader className = 'card-header'>{member.name}</CardHeader>
-              <CardImg className = 'card-img' top-width= "80%" src= {member.pic} alt = "Member Image"/>
-              </Card>
-            </div>
-          
-            
-          ))}
-        </div>
-      </teamCard>
+
+     
     );
   }
 }
+
+export default TeamCard

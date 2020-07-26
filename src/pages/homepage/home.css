@@ -1,7 +1,7 @@
 
+
 .landing-grid{
-  background: #a6dbf7;  
-  position: fixed;
+  background: #a6dbf7; 
   text-align:center;
   top:0;
   left: 0;
@@ -16,9 +16,10 @@
 }
 
 .banner-text{
-  background-color:rgb(250, 248, 148);
+  /* background-color:rgb(250, 248, 148); */
+  background-color: rgb(6, 0, 59);
   height: 300px;
-  opacity:1;
+  opacity:0.8;
   width: 100%;
   margin:auto;
   border-radius:30px;
@@ -27,18 +28,56 @@
 .banner-text h1 {
   font-size: 66px;
   font-weight: bold;
-  color: rgb(4, 35, 134);
+  /* color: rgb(4, 35, 134); */
+  color: rgb(255, 255, 255);
 }
 
 .banner-text hr {
-  border-top: 5px dotted  rgb(4, 35, 134);
+  /* border-top: 5px dotted  rgb(4, 35, 134); */
+  border-top: 5px dotted  rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   widows: 100%;
   margin:auto;
 }
 
 .banner-text p{
-  color: rgb(4, 35, 134);
+  /* color: rgb(4, 35, 134); */
+  color: rgb(255, 255, 255);
   font-size: 35px;
   font: Comic Sans;
   padding:25px 50px 75px;
 }
+
+.meet-team {
+  display: flex;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px; 
+  padding-left: 120px;
+  padding-right:30px;
+  font-size: 30px;
+}
+
+.meet-header {
+  color: rgb(4, 35, 134);
+  font-size: 50px;
+  text-decoration-line: underline overline;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+  /* flex-direction: column;
+  margin: 0 auto;
+  display: inline; */
+  /* text-decoration-line: underline; */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* font: Comic Sans;
+  font-weight: bold;
+  justify-content: center;
+  text-align:center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50%;  */
+}
+
+
