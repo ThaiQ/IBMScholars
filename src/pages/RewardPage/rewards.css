@@ -1,0 +1,96 @@
+.reward-card-wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.img {
+    height: 178px;
+    width: 250px;
+}
+
+.bold-header {
+    font-weight: bold;
+}
+
+.parent-container {
+    background-color: rgb(168, 137, 98);
+    position: absolute;  
+    top: 0; 
+    left: 0; 
+      
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.instructions-text {
+    font-size: 20px;
+}
+
+.circle {
+    padding-left: 25%;
+}
+
+.points-container {
+    width: 100%;
+    padding: 30px;
+    background-color: rgb(252, 189, 182);
+    grid-area: right;
+}
+
+.chunk {
+    width: 100%;
+}
+
+.reward-container {
+    grid-area: main;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(248, 153, 142);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.points {
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.card-header{
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+.shopping-list {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.indv-card {
+    align-self: center;
+    background-color: white;
+    font-size: large;
+    max-width: 250px;
+    min-width: 250px;
+    max-height: 370px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'main main main main right right'
+      'menu footer footer footer footer footer';
+}
+
+.btn {
+    border: 1px; /* Remove borders */
+    color: white; /* White text */
+    font-size: 0px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+  
+.btn:hover {
+    background-color: rgb(224, 124, 110);
+}

@@ -32,6 +32,7 @@ export default function Mer(props) {
     .then(()=>{getMerchant()})
     .catch((err)=>{console.log(err)})
   }
+  
   return (
     <div>
       <p>Merchant-Names</p>

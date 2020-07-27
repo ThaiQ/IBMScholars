@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/homepage/home'
 import ABCLesson from './pages/ABCLesson/ABCLesson';
+import Reward from './pages/RewardPage/rewards';
 
 export default function Routes(props) {
 
@@ -14,6 +15,10 @@ export default function Routes(props) {
         {
             path: '/lesson',
             component: ABCLesson
+        },
+        {
+            path: '/reward',
+            component: Reward
         }
     ]
 

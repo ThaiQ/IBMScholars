@@ -63,7 +63,7 @@ const UserNavbar = props => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink id="user-item" className="user-item" href="#">
+              <NavLink id="user-item" className="user-item" href="/reward">
                 Rewards
               </NavLink>
             </NavItem>
