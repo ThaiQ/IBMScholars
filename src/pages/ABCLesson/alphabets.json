@@ -19,5 +19,12 @@
         "word": "Cat",
         "letterSound": "c",
         "wordSound": "Wsound"
+    },
+    {
+        "letter": "Congrats!!!",
+        "image": "https://i.imgur.com/U1C0mTM.png",
+        "word": "",
+        "letterSound": "",
+        "wordSound": ""
     }
 ]

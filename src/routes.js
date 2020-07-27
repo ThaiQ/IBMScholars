@@ -9,7 +9,10 @@ export default function Routes(props) {
     const routes = [
         {
             path: '/',
-            // component: Home, ABCLesson
+            component: Home
+        },
+        {
+            path: '/lesson',
             component: ABCLesson
         }
     ]
