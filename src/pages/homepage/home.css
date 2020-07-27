@@ -12,17 +12,16 @@
 .homepage-img{
   height: 500px;
   width: 85%;
-  padding-top: 5pm;
 }
 
 .banner-text{
   /* background-color:rgb(250, 248, 148); */
   background-color: rgb(6, 0, 59);
-  height: 300px;
+  height: auto;
   opacity:0.8;
   width: 100%;
   margin:auto;
-  border-radius:30px;
+  /* border-radius:30px; */
 }
 
 .banner-text h1 {
@@ -46,16 +45,18 @@
   font-size: 35px;
   font: Comic Sans;
   padding:25px 50px 75px;
+  line-height: 100%;
+  
 }
 
 .meet-team {
-  display: flex;
-  flex-wrap: wrap;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px; 
-  padding-left: 120px;
-  padding-right:30px;
+  /* display: flex;
+  flex-wrap: wrap; */
+  /* display: grid; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-gap: 10px;  */
+  /* padding-left: 120px;
+  padding-right:30px; */
   font-size: 30px;
 }
 
@@ -80,4 +81,29 @@
   padding-left: 50%;  */
 }
 
+.info {
+  font-size: 20px;
+}
 
+.flex-item {
+  margin:3%;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.wrap-reverse         { 
+  -webkit-flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+} 

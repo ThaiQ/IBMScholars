@@ -9,6 +9,7 @@
   white-space:normal;
   overflow-x: scroll;
   flex-wrap: wrap;
+  /* padding:0 !important; */
 }
 
 .title {
@@ -29,6 +30,6 @@
 }
 
 .pic-dim{
-  width: 350px;
-  height: 400px;
+  width: 400px !important;
+  height: 400px !important;
 }
