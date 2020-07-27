@@ -49,10 +49,10 @@ class home extends Component {
   render() {
     let creatorCards = this.state.creators.map(creators => {
       return (
-        <li className = "flex-item">
+        <li className="flex-item">
           <TeamCard creators={creators} />
         </li>
-      
+
       )
     })
     return (
@@ -81,14 +81,9 @@ class home extends Component {
             <p className='info'>Our team includes 5 young developers who hope to make a positive difference
               using their technical skills. This platform runs entirely on the IBM cloud.
             </p>
-            {/* <div className='meet-team'> */}
-              <ul className="flex-container wrap-reverse">
-                {creatorCards}
-              </ul>
-
-            {/* </div> */}
-
-
+            <ul className="flex-container wrap-reverse">
+              {creatorCards}
+            </ul>
           </div>
         </div>
       </div>

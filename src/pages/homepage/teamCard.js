@@ -3,7 +3,6 @@ import {CardImg, Card, CardBody, CardTitle, CardText} from 'reactstrap';
 
 import './teamCard.css';
 
-
 class TeamCard extends React.Component {
   render() {
     return (
@@ -17,10 +16,7 @@ class TeamCard extends React.Component {
           <a href={this.props.creators.Linkedin}><i class="fa fa-linkedin"></i></a>
         </CardBody>
       </Card>
-    </div>
-
-
-     
+    </div> 
     );
   }
 }
