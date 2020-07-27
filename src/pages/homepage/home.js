@@ -10,7 +10,7 @@ import surabhi from '../homepage/pictures/surabhi.png'
 import thai from '../homepage/pictures/thai.png'
 
 
-class home extends Component {
+export default class Home extends Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -90,5 +90,3 @@ class home extends Component {
     )
   }
 }
-
-export default home

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { CardImg, Card, CardBody, CardTitle, CardText } from 'reactstrap';
 
 import './teamCard.css';
 
-class TeamCard extends React.Component {
+export default class TeamCard extends Component{
   render() {
     return (
 
@@ -20,5 +20,3 @@ class TeamCard extends React.Component {
     );
   }
 }
-
-export default TeamCard
