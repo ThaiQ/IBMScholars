@@ -30,7 +30,7 @@
 .points-container {
     width: 100%;
     padding: 30px;
-    background-color: wheat;
+    background-color: rgb(252, 189, 182);
     grid-area: right;
 }
 
@@ -42,7 +42,7 @@
     grid-area: main;
     padding: 20px;
     text-align: center;
-    background-color: rgb(173, 157, 136);
+    background-color: rgb(248, 153, 142);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -56,7 +56,6 @@
 .card-header{
     font-weight: lighter;
     font-size: 25px;
-    background-color: wheat;
 }
 
 .shopping-list {
@@ -89,5 +88,5 @@
 }
   
 .btn:hover {
-    background-color: rgb(202, 161, 84);
+    background-color: rgb(224, 124, 110);
 }

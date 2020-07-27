@@ -5,10 +5,6 @@ import 'react-circular-progressbar/dist/styles.css';
 import { Label, Row, Col, Button, CardImg, Card, CardBody, CardHeader, CardText } from 'reactstrap';
 import axios from 'axios';
 import UserNavbar from '../../components/navbar/navbar';
-import rewardSound from './rewards.json';
-// import UIfx from 'uifx';
-// import btnSound from "../sounds/state-change_confirm-up.wav";
-const { base_URL } = require('../../const')
 
 const value = 7.80;
 
@@ -16,8 +12,6 @@ class Rewards extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            rewardSound: rewardSound,
-            audioVal: '',
             item: '',
             price: '',
             id: '',
@@ -83,21 +77,8 @@ class Rewards extends Component {
         this.addItem = this.addItem.bind(this);
         this.deleteItem = this.deleteItem.bind(this);
         this.rand = this.rand.bind(this);
-        // this.playAudio = this.playAudio.bind(this);
     }
-
-    // playAudio = () => {
-    //     console.log('playing sound..');
-    //     // this.setState({ audioVal: this.state.rewardSound.instructionAudio},
-    //     // () => {
-    //         this.audio = new Audio(base_URL + '/mp3/' + this.state.rewardSound.instructionAudio);
-    //         this.audio.load();
-    //         this.audio.play();
-    //     // }
-    //     //);
-    // }
         
-
     componentDidMount(){
         this.getItem();
     }
@@ -147,9 +128,6 @@ class Rewards extends Component {
     }
 
     render() {
-        // const tick = new UIfx(this.state.rewardSound.instructionAudio);
-        // tick.setVolume(0.8);
-
         return( 
             <div className = 'parent-container'>
             <div><UserNavbar /></div>
@@ -184,9 +162,7 @@ class Rewards extends Component {
                     </h2>
                     <hr/>
                     <div>
-                        <h4>Instructions 
-                            {/* <button onClick= {this.playAudio}>Speaker</button> */}
-                        </h4>
+                        <h4>Instructions </h4>
                             {this.state.instructions.map((type, ind) => (
                                 <div key={ind} className = 'instructions-text'>
                                     <Label>{type}</Label>
@@ -200,11 +176,12 @@ class Rewards extends Component {
                             value={value} maxValue={value * 1000} 
                             text={`${value * 100}` + 'PTS'} 
                             styles = { buildStyles({
-                                pathColor: `rgba(#bdb76b ${value / 100})`,
+                                pathColor: `rgba(#e9967a ${value / 100})`,
                                 pathColor: `rgba(62, 152, 199, ${value / 100})`,
                                 textColor: '#fffff0',
-                                trailColor: '#bdb76b',
-                                backgroundColor: '#bdb76b',
+                                //trailColor: '#bdb76b',
+                                trailColor: '#e9967a',
+                                //backgroundColor: '#e9967a',
                             })}
                         />
                     </div>
@@ -217,7 +194,7 @@ class Rewards extends Component {
                         <Col>{type.item}</Col> 
                         <Col>{type.price} POINTS</Col>
                         <button className = 'btn button'     
-                            onClick={() => this.deleteItem(type.item, type.price, type.id)}>
+                            onClick={() => this.deleteItem(type.item, type.id)}>
                                 <i className="fa fa-trash"/>
                         </button> 
                     </Row>
