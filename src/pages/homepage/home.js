@@ -70,7 +70,7 @@ export default class Home extends Component{
               <hr />
               <p className='lead text-center'>
                 {' '}
-                Every child deseverves the same opportunities. Our program hopes to give low-income elementary school kids with disabilities
+                Every child deserves the same opportunities. Our program hopes to give low-income elementary school kids with disabilities
                 a personalized service, which teaches them primary school topics geared to fit their needs. Our platform is about creating a community
                 for these students.
             </p>
