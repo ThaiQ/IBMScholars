@@ -1,85 +1,38 @@
-.landing-grid {
-  background: #a6dbf7;
+.App {
   text-align: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
-.homepage-img {
-  height: 500px;
-  width: 85%;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.banner-text {
-  background-color: rgb(6, 0, 59);
-  height: auto;
-  opacity: 0.8;
-  width: 100%;
-  margin: auto;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.banner-text h1 {
-  font-size: 66px;
-  font-weight: bold;
-  /* color: rgb(4, 35, 134); */
-  color: rgb(255, 255, 255);
-}
-
-.banner-text hr {
-  border-top: 5px dotted rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
-  widows: 100%;
-  margin: auto;
-}
-
-.banner-text p {
-  color: rgb(255, 255, 255);
-  font-size: 35px;
-  font: Comic Sans;
-  padding: 25px 50px 75px;
-  line-height: 100%;
-}
-
-.meet-team {
-  font-size: 30px;
-}
-
-.meet-header {
-  color: rgb(4, 35, 134);
-  font-size: 50px;
-  text-decoration-line: underline overline;
-  font-weight: bold;
-  margin: 0 auto;
-  text-align: center;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-
-.info {
-  font-size: 20px;
-}
-
-.flex-item {
-  margin: 3%;
-}
-
-.flex-container {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  -ms-box-orient: horizontal;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.wrap-reverse {
-  -webkit-flex-wrap: wrap-reverse;
-  flex-wrap: wrap;
-  justify-content: center;
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
