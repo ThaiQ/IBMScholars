@@ -17,11 +17,14 @@ const client = new Client({
  * or 'npm run remove-tables'
  */
 const {merchantTable, merchantName} = require('./merchants/table')
+const {postName, postTable} = require('./post/table')
+const {commentName, commentTable} = require('./comment/table')
 const {rewardTable, rewardName} = require('./rewards/table')
 //Add tables into this array
-const tables = [merchantTable, rewardTable]
-//Add name of tables into this array
-const tableNames = [merchantName, rewardName]
+const tables = [merchantTable, postTable, commentTable, rewardTable]
+//Add name of tables that you want to delete into this array
+//Only delete when "npm run remove-tables"
+const tableNames = [merchantName, postName, commentName, rewardName]
 
 //Init express
 const express = require('express')

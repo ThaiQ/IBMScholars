@@ -8,6 +8,8 @@ const {app} = require('./constants')
 //Import routes
 require('./merchants/routes') //Example merchants routes
 require('./mp3/routes')
+require('./comment/routes')
+require('./post/routes')
 require('./rewards/routes')
 
 // enable parsing of http request body
