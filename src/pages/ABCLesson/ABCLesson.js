@@ -7,7 +7,7 @@ import btnSound from "../sounds/state-change_confirm-up.wav";
 import Navbar from "../../components/navbar/navbar.js";
 const { base_URL } = require('../../const')
 
-
+//Creates a sample ABC lesson
 class ABCGame extends Component {
     constructor(props) {
         super(props);
@@ -27,6 +27,7 @@ class ABCGame extends Component {
 
     }
 
+    //Function to create Audio component
     playSound = () => {
         this.setState({ audioVal: this.state.alphabets[this.state.currentPosition].letterSound },
             () => {
@@ -41,6 +42,8 @@ class ABCGame extends Component {
         this.setState({ audioVal: this.state.alphabets[this.state.currentPosition].letterSound });
     }
 
+    //Function to control the "next" button
+    //Changes variables as per the current alphabet on display
     next() {
         if (this.state.currentPosition < 3) {
             if (this.state.alphaTick < 2) {
@@ -50,6 +53,7 @@ class ABCGame extends Component {
                 this.setState({ currentPosition: this.state.currentPosition + 1, alphaTick: 0 });
             }
         }
+        //alerts for edge cases when the students reaches the end
         else {
             alert("CONGRATS! You have reached the end");
         }
@@ -58,7 +62,10 @@ class ABCGame extends Component {
         this.setState({ audioPath: base_URL + '/mp3/' + this.state.audioLetter[this.state.currentPosition] });
     }
 
+    //Function to control the "previous" button
+    //Changes variables as per the current alphabet on display
     previous() {
+        //alerts for edge cases when the students tries illegal options
         if (this.state.currentPosition === 0) {
             alert("You can't go back!!");
             this.setState({ currentPosition: 0 });
