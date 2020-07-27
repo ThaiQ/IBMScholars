@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import './ABCLesson.css';
-import { Button, Container, Input, Label, Col, Alert } from 'reactstrap';
 import alphabets from './alphabets.json'
 import classNames from 'classnames';
-import Modal from 'react-modal';
 import UIfx from 'uifx';
 import btnSound from "../sounds/state-change_confirm-up.wav";
 import Navbar from "../../components/navbar/navbar.js";
@@ -30,9 +28,6 @@ class ABCGame extends Component {
     }
 
     playSound = () => {
-
-        console.log("playing..");
-        console.log(this.state.currentPosition);
         this.setState({ audioVal: this.state.alphabets[this.state.currentPosition].letterSound },
             () => {
                 this.audio = new Audio(base_URL + '/mp3/' + this.state.audioVal);
@@ -40,9 +35,6 @@ class ABCGame extends Component {
                 this.audio.play();
             }
         );
-
-
-        //base_URL + '/mp3/' + this.state.audioLetter[this.state.currentPosition]
     }
 
     componentDidMount() {
@@ -61,20 +53,12 @@ class ABCGame extends Component {
         else {
             alert("CONGRATS! You have reached the end");
         }
-        console.log('next button clicked');
         const nSound = new UIfx(btnSound);
         nSound.play();
-        console.log(this.state.currentPosition);
         this.setState({ audioPath: base_URL + '/mp3/' + this.state.audioLetter[this.state.currentPosition] });
-        console.log(this.state.audioPath);
-        //this.setState({ audioVal: this.state.alphabets[this.state.currentPosition].letterSound });
-        //console.log(this.state.audioVal);
-
     }
 
     previous() {
-        console.log('previous button clicked');
-
         if (this.state.alphaTick <= 2 && this.state.alphaTick !== 0) {
             this.setState({ alphaTick: this.state.alphaTick - 1 });
         }
@@ -86,18 +70,13 @@ class ABCGame extends Component {
         }
     }
 
-
-
     render() {
         let showImage = this.state.alphaTick !== 0 ? true : false;
         let showWord = this.state.alphaTick === 2 ? true : false;
-        //const tick = new UIfx(this.state.alphabets[this.state.currentPosition].letterSound);
-        //tick.setVolume(0.8);
 
         return (
             <div className="overview">
                 <Navbar />
-
                 <div className="game">
                     <div className="option">
                         <div className="fields">
@@ -109,11 +88,8 @@ class ABCGame extends Component {
                             <a onClick={this.previous} className="button prev">Previous</a>
                             <a onClick={this.playSound} className="button sound">Play Sound Again
                         <img className="icon" src="https://i.imgur.com/VoGIU6b.png" /></a>
-                            {/* <a onClick={() => tick.play()} className="button sound">Play Sound Again</a> */}
                             <a onClick={this.next} className="button next">Next!</a>
-
                         </div>
-
                         <div className="fields">
                             <div className="field-block">
                                 <div className="left-field">
