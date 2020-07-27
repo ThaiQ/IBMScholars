@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
+    "classnames": "^2.2.6",
     "cross-env": "^7.0.2",
     "inquirer": "^7.3.2",
     "pg": "^8.3.0",
@@ -17,7 +18,9 @@
     "react-mdl": "^2.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "reactstrap": "^8.5.1"
+    "react-sound": "^1.2.0",
+    "reactstrap": "^8.5.1",
+    "uifx": "^2.0.7"
   },
   "scripts": {
     "start": "react-scripts start",

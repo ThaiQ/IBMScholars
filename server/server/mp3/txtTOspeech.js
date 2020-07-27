@@ -27,6 +27,10 @@ const txtToTranslate = [
     {
         fileName: 'b',
         txt: 'b'
+    },
+    {
+        fileName: 'c',
+        txt: 'c'
     }
 ]
 

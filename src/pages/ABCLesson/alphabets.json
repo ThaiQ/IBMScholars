@@ -1,0 +1,30 @@
+[
+    {
+        "letter": "A",
+        "image": "https://i.imgur.com/afw4QTR.png",
+        "word": "Apple",
+        "letterSound": "a",
+        "wordSound": "Wsound"
+    },
+    {
+        "letter": "B",
+        "image": "https://i.imgur.com/lKcpdPX.png",
+        "word": "Banana",
+        "letterSound": "b",
+        "wordSound": "Wsound"
+    },
+    {
+        "letter": "C",
+        "image": "https://i.imgur.com/1D5ZtxD.png",
+        "word": "Cat",
+        "letterSound": "c",
+        "wordSound": "Wsound"
+    },
+    {
+        "letter": "Congrats!!!",
+        "image": "https://i.imgur.com/U1C0mTM.png",
+        "word": "",
+        "letterSound": "",
+        "wordSound": ""
+    }
+]

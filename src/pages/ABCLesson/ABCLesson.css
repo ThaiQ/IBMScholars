@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.game{
+    color: #ddd;
+    background-color: #9c6176;
+    padding-top: 0 !important;
+    padding: 60px !important;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.option{
+    font-family: 'Poppins',sans-serif;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex:1;
+    width: auto;
+}
+
+.field-block{
+    display: flex;
+    min-height: 240px;
+    width: auto;
+    height: 450px;
+    padding: 1%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #f9bad0;
+    font-size: 12rem;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.field-block .span{
+    font-size: 3rem;
+    padding-left: 10px;
+}
+
+.field-block .word{
+    font-size: 4rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-left: 0px;
+    padding-top: 100px;
+}
+
+.placeholder-span{
+    position: relative;
+    padding: 30%;
+    color: black;
+    font-size: x-large;
+    font-style: oblique;
+}
+
+.letter-image{
+    width: 600px;
+    padding-left: 50%;
+}
+
+.word{
+    width: 600px;
+    padding-left: 50%;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button{
+    display: flex;
+    height: 48px;
+    padding-right: 16px;
+    padding-left: 16px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    border-radius: 4px;
+    background-color: #2fcaaa;
+    box-shadow: 0 1px 3px 0px rgba(180, 101, 101, 0.05), 0 2px 12px 0px rgba(0,0,0,.1);
+    transition: 200ms ease-out;
+    color: rgb(5, 0, 0);
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.icon{
+    order: 1;
+    width: 30px;
+    margin-left: 0.5rem;
+}
+
+.prev{
+    background-color: #7cc94f;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.sound{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.audio{
+    height: 10vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+audio{
+    filter: sepia(100%) saturate(400%) grayscale(0) contrast(200%) hue-rotate(49deg) invert(12%);
+}
+
+.next{
+    background-color: #00a7f7;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.hide {
+    display: none !important;
+}
+
+.prev, .next, .sound{
+    color: black !important;
+    width: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.left-field{
+    height: 100%;
+    width: 45%;
+}
+
+.right-field{
+    height: 100%;
+    width: 45%;
+}
+

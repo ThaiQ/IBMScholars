@@ -5,12 +5,12 @@ import TeamCard from './teamCard'
 import UserNavbar from '../../components/navbar/navbar';
 import nanar from '../homepage/pictures/nanar.jpeg';
 import annabel from '../homepage/pictures/annabel.jpeg';
-import seema from '../homepage/pictures/seema.jpeg'
+import seema from '../homepage/pictures/seema.jpg'
 import surabhi from '../homepage/pictures/surabhi.png'
 import thai from '../homepage/pictures/thai.png'
 
 
-export default class Home extends Component{
+export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -79,7 +79,7 @@ export default class Home extends Component{
               Meet the Team
             </div>
             <p className='info'>Our team includes 5 young developers who hope to make a positive difference
-              using their technical skills. This platform runs entirely on the IBM cloud.
+            using their technical skills. This platform runs entirely on the IBM cloud.
             </p>
             <ul className="flex-container wrap-reverse">
               {creatorCards}
