@@ -70,8 +70,8 @@ class home extends Component {
               <hr />
               <p className='lead text-center'>
                 {' '}
-                Every child deseverves the same opportunities. Our program hopes to give low-income elementary school kids with disabilities,
-                a personalized service which teaches them primary school topics geared to fit their needs. Our platform is about creating a community
+                Every child deseverves the same opportunities. Our program hopes to give low-income elementary school kids with disabilities
+                a personalized service, which teaches them primary school topics geared to fit their needs. Our platform is about creating a community
                 for these students.
             </p>
             </div>
