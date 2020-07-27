@@ -131,12 +131,13 @@ class Rewards extends Component {
         return( 
             <div className = 'parent-container'>
             <div><UserNavbar /></div>
-            <h1>REWARD</h1>
-            <div class="grid-container"> 
+            <h2>REWARD</h2>
+            <br></br>
+            <div className="grid-container"> 
                 <div className = 'reward-container'>
                 {this.state.rewardType.map((type, ind) => (
-                    <div className = 'card-wrapper'>
-                        <Card outline color="warning" className = 'indv-card' key = {ind}>
+                    <div className = 'reward-card-wrapper' key = {ind}>
+                        <Card outline color="warning" className = 'indv-card'>
                             <CardHeader className = 'card-header'>{type.item}</CardHeader>
                             <CardImg className= 'img' top width="100%" src={type.img} alt="Card image cap" />
                             <CardBody>
@@ -157,12 +158,12 @@ class Rewards extends Component {
                 </div>
                      
                 <div className="points-container" >
-                    <h2>
+                    <h1>
                         Claim Your Reward  &emsp;
-                    </h2>
+                    </h1>
                     <hr/>
                     <div>
-                        <h4>Instructions </h4>
+                        <h4 className= 'bold-header'>Instructions</h4>
                             {this.state.instructions.map((type, ind) => (
                                 <div key={ind} className = 'instructions-text'>
                                     <Label>{type}</Label>
@@ -179,9 +180,7 @@ class Rewards extends Component {
                                 pathColor: `rgba(#e9967a ${value / 100})`,
                                 pathColor: `rgba(62, 152, 199, ${value / 100})`,
                                 textColor: '#fffff0',
-                                //trailColor: '#bdb76b',
                                 trailColor: '#e9967a',
-                                //backgroundColor: '#e9967a',
                             })}
                         />
                     </div>
@@ -189,8 +188,8 @@ class Rewards extends Component {
                     <div>
                 <p className = 'card-header'>Shopping Cart</p>
                 {this.state.itemInCart ? this.state.itemInCart.map((type, ind) =>
-                <div>
-                    <Row className = 'shopping-list' key={ind}>
+                <div key={ind}>
+                    <Row className = 'shopping-list' >
                         <Col>{type.item}</Col> 
                         <Col>{type.price} POINTS</Col>
                         <button className = 'btn button'     

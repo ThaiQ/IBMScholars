@@ -1,4 +1,4 @@
-.card-wrapper {
+.reward-card-wrapper {
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -6,6 +6,10 @@
 .img {
     height: 178px;
     width: 250px;
+}
+
+.bold-header {
+    font-weight: bold;
 }
 
 .parent-container {
