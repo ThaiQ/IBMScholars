@@ -192,7 +192,7 @@ class Rewards extends Component {
                     <Row className = 'shopping-list' >
                         <Col>{type.item}</Col> 
                         <Col>{type.price} POINTS</Col>
-                        <button className = 'btn button'     
+                        <button className = 'btn'     
                             onClick={() => this.deleteItem(type.item, type.id)}>
                                 <i className="fa fa-trash"/>
                         </button> 
