@@ -59,7 +59,11 @@ class ABCGame extends Component {
     }
 
     previous() {
-        if (this.state.alphaTick <= 2 && this.state.alphaTick !== 0) {
+        if (this.state.currentPosition === 0) {
+            alert("You can't go back!!");
+            this.setState({ currentPosition: 0 });
+        }
+        else if (this.state.alphaTick <= 2 && this.state.alphaTick !== 0) {
             this.setState({ alphaTick: this.state.alphaTick - 1 });
         }
         else if (this.state.alphaTick == 0) {
@@ -86,7 +90,7 @@ class ABCGame extends Component {
                         </div>
                         <div className="buttons">
                             <a onClick={this.previous} className="button prev">Previous</a>
-                            <a onClick={this.playSound} className="button sound">Play Sound Again
+                            <a onClick={this.playSound} className="button sound">Play Sound
                         <img className="icon" src="https://i.imgur.com/VoGIU6b.png" /></a>
                             <a onClick={this.next} className="button next">Next!</a>
                         </div>
