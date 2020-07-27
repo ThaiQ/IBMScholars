@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/homepage/home'
 import ABCLesson from './pages/ABCLesson/ABCLesson';
 import Reward from './pages/RewardPage/rewards';
+import Form from './pages/forms/forms'
 
 export default function Routes(props) {
 
@@ -19,6 +20,10 @@ export default function Routes(props) {
         {
             path: '/reward',
             component: Reward
+        },
+        {
+            path: '/form',
+            component: Form
         }
     ]
 
