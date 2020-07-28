@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from "../../../components/navbar/navbar.js";
 import GameLayout from '../Autism/gameLayout.js'
-import './adhd.css'
+import '../Autism/disabilities.css'
 
 
 
@@ -17,9 +17,8 @@ export default class ADHD extends Component {
           <div className='adhd-page'>
 
            
-        <div className="banner-text">
+        <div className="banner-texts">
               <h1>About Us</h1>
-              <hr />
               <p className='lead text-center'>
                 {' '}
                 THIS PAGE IS CURRENTLY UNDER CONSTRUCTION

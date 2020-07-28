@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from "../../../components/navbar/navbar.js";
 import GameLayout from '../Autism/gameLayout.js'
-import './autism.css'
+import './disabilities.css'
 
 import abc from './pictures/abc.png'
 import matching from './pictures/matching.jpg'
@@ -52,7 +52,7 @@ export default class Autism extends Component {
           <div className='autism-page'>
             <ul className="flex-container wrap-reverse">
            
-        <div className="banner-text">
+        <div className="banner-texts">
               <h1>About Us</h1>
               <hr />
               <p className='lead text-center'>
