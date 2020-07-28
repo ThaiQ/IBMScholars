@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/homepage/home'
-import Lesson from './pages/practicepage/practice'
+import Game from './pages/ABCGame1/ABCGame1'
 
 export default function Routes(props) {
 
@@ -12,8 +12,8 @@ export default function Routes(props) {
             component: Home
         },
         {
-            path: '/lesson',
-            component: Lesson
+            path: '/game1',
+            component: Game
         }
     ]
 
