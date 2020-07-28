@@ -6,6 +6,7 @@ import { Label, Row, Col, Button, CardImg, Card, CardBody, CardHeader, CardText 
 import axios from 'axios';
 import UserNavbar from '../../components/navbar/navbar';
 
+const {base_URL} = require('../../const')
 const value = 7.80;
 
 class Rewards extends Component {
@@ -84,7 +85,7 @@ class Rewards extends Component {
     }
 
     getItem() {
-        axios.get('http://localhost:3001/getItems')
+        axios.get(`${base_URL}/getItems`)
          .then(result => {this.setState({ itemInCart : result.data}, () => {this.getTotal(result.data)})})
          .catch((err) => {console.log(err)})
     }
@@ -112,7 +113,7 @@ class Rewards extends Component {
             price: cost,
             id: id,
         }
-        axios.post(`http://localhost:3001/addItem`, obj)
+        axios.post(`${base_URL}/addItem`, obj)
          .then((result)=> {this.getItem()})
          .catch((err) => {console.log(err)})
     }
@@ -122,7 +123,7 @@ class Rewards extends Component {
             item: name,
             id: id,
         }
-        axios.post(`http://localhost:3001/deleteItem`, obj)
+        axios.post(`${base_URL}/deleteItem`, obj)
         .then((result) => {this.getItem()})
         .catch((err) => {console.log(err)})
     }
@@ -192,7 +193,7 @@ class Rewards extends Component {
                     <Row className = 'shopping-list' >
                         <Col>{type.item}</Col> 
                         <Col>{type.price} POINTS</Col>
-                        <button className = 'btn button'     
+                        <button className = 'btn'     
                             onClick={() => this.deleteItem(type.item, type.id)}>
                                 <i className="fa fa-trash"/>
                         </button> 
