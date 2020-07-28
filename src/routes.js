@@ -7,6 +7,8 @@ import Autism from './pages/Disabilities/Autism/autism';
 import ADHD from './pages/Disabilities/ADHD/adhd';
 import ABCGame2 from './pages/games/ABCGame2/ABCGame2';
 import Forum from './pages/forum/forum';
+import SignUp from './pages/SignUp/signUp';
+import Login from './pages/Login/login';
 
 export default function Routes(props) {
 
@@ -39,6 +41,14 @@ export default function Routes(props) {
         {
             path: '/matching',
             component: ABCGame2
+        },
+        {
+            path: '/signUp',
+            component: SignUp
+        },
+        {
+            path: '/login',
+            component: Login
         }
     ]
 

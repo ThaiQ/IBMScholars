@@ -130,7 +130,7 @@ class Rewards extends Component {
 
     render() {
         return( 
-            <div className = 'parent-container'>
+            <div>
             <div><UserNavbar /></div>
             <h2>REWARD</h2>
             <br></br>
