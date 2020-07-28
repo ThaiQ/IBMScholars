@@ -7,7 +7,6 @@ import Autism from './pages/Disabilities/Autism/autism';
 import ADHD from './pages/Disabilities/ADHD/adhd';
 import ABCGame2 from './pages/games/ABCGame2/ABCGame2';
 import Forum from './pages/forum/forum';
-import Form from './pages/forms/forms'
 import Game1 from './pages/ABCGame1/ABCGame1'
 
 export default function Routes(props) {
@@ -27,7 +26,6 @@ export default function Routes(props) {
             component: Reward
         },
         {
-<<<<<<< HEAD
             path: '/forum',
             component: Forum
         },
@@ -42,14 +40,10 @@ export default function Routes(props) {
         {
             path: '/matching',
             component: ABCGame2
-=======
-            path: '/form',
-            component: Form
         },
         {
             path: '/game1',
             component: Game1
->>>>>>> Adds Pop-up Modal and CSS touches
         }
     ]
 
