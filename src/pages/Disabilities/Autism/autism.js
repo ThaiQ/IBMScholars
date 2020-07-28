@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import Navbar from "../../../components/navbar/navbar.js";
 import GameLayout from '../Autism/gameLayout.js'
 import './disabilities.css'
-
 import abc from './pictures/abc.png'
 import matching from './pictures/matching.jpg'
 import phonics from './pictures/phonics.jpg'
-
+const {AutismColors} = require('../../../const')
 export default class Autism extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      theme: AutismColors.blue,
       activeTab: '1',
       activities: [
         {
@@ -32,6 +32,15 @@ export default class Autism extends Component {
     };
   }
 
+  componentDidMount () {
+    this.initTheme ()
+  }
+
+  initTheme () {
+    let theme = JSON.parse(localStorage.getItem('theme'))
+    theme && this.setState({theme:theme})
+  }
+
   render() {
     let activities = this.state.activities.map(activities => {
       return (
@@ -43,7 +52,7 @@ export default class Autism extends Component {
     })
     return (
       <div className='overview'>
-        <Navbar />
+        <Navbar autism={()=>this.initTheme()}/>
         <div style={{ width: '100%', margin: 'auto' }}>
           <div className='autism-page'>
             <ul className="flex-container wrap-reverse">

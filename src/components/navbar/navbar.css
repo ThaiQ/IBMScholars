@@ -1,14 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
-.user-navbar[barColor='purple'] {
-  background-color: #cc99ff;
-  width: 100%;
-  z-index: 50;
-  position: fixed;
-}
-
-.user-navbar[barColor='yellow'] {
-  background-color: rgb(250, 248, 148);
+.user-navbar {
   width: 100%;
   z-index: 50;
   position: fixed;

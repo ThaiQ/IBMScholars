@@ -91,14 +91,11 @@ export default function Forum(props) {
       <h1>Blank Space Ignore</h1>
       <div className = 'side-design'>
       <Container className = 'posts-container'><h1 className = 'community-header'>Community Forum</h1>
-      <Row>
-        <Col>
-          <input className='form-search' placeholder='Search For Posts' onChange={(event) => { search(event.target.value) }} />
-        </Col>
-        <Col>
+      
+      <div style={{marginBottom:'3vh'}}>
+        <input className='form-search' placeholder='Search For Posts' onChange={(event) => { search(event.target.value) }} />
         <Button className = 'ask-q-button' color="warning" onClick={() => toggleAsk()}><span>Ask a Question</span></Button>
-        </Col>
-      </Row>
+      </div>
       
       <br />  
 

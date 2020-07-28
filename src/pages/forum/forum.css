@@ -38,6 +38,8 @@
     cursor: pointer;
     font-size: 17px !important;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    float: right;
+    margin-right: 3vw;
 }
   
 .ask-q-button span {
