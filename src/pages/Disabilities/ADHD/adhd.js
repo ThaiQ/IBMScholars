@@ -3,10 +3,6 @@ import Navbar from "../../../components/navbar/navbar.js";
 import GameLayout from '../Autism/gameLayout.js'
 import '../Autism/disabilities.css'
 
-
-
-
-
 export default class ADHD extends Component {
 
   render() {
@@ -14,19 +10,15 @@ export default class ADHD extends Component {
       <div className='adhd-page'>
         <Navbar />
         <div style={{ width: '100%', margin: 'auto' }}>
-          <div className='adhd-page'>
-
-           
+          <div className='adhd-page'>       
         <div className="banner-texts">
               <h1>About Us</h1>
               <p className='lead text-center'>
-                {' '}
+                <br/>
                 THIS PAGE IS CURRENTLY UNDER CONSTRUCTION
-            </p>
-            
+            </p>           
             </div>
-            </div>
-        
+            </div>        
           </div>
         </div>
         )

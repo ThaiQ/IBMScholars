@@ -7,14 +7,11 @@ import abc from './pictures/abc.png'
 import matching from './pictures/matching.jpg'
 import phonics from './pictures/phonics.jpg'
 
-
-
 export default class Autism extends Component {
   constructor(props) {
     super(props);
     this.state = {
       activeTab: '1',
-
       activities: [
         {
           name: 'ABC Lesson',
@@ -42,7 +39,6 @@ export default class Autism extends Component {
         <li className="flex-item">
           <GameLayout activities={activities} />
         </li>
-
       )
     })
     return (
