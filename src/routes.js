@@ -6,6 +6,7 @@ import Reward from './pages/RewardPage/rewards';
 import Form from './pages/forms/forms';
 import Autism from './pages/Disabilities/Autism/autism';
 import ADHD from './pages/Disabilities/ADHD/adhd';
+import ABCGame2 from './pages/games/ABCGame2/ABCGame2';
 
 export default function Routes(props) {
 
@@ -34,6 +35,10 @@ export default function Routes(props) {
         {
             path: '/adhd',
             component: ADHD
+        },
+        {
+            path: '/matching',
+            component: ABCGame2
         }
     ]
 

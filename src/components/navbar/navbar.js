@@ -34,7 +34,7 @@ const UserNavbar = props => {
       <Navbar light expand="md">
         <NavbarBrand className="nav-brand" id="nav-brand" href="/">
           EPIC Education
-          <img id="logo-image" src={logo} alt={"bse logo"} />
+          <img id="logo-image" src={logo} alt={"eedu logo"} />
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
