@@ -180,8 +180,8 @@ class Rewards extends Component {
                             styles = { buildStyles({
                                 pathColor: `rgba(#e9967a ${value / 100})`,
                                 pathColor: `rgba(62, 152, 199, ${value / 100})`,
-                                textColor: '#fffff0',
-                                trailColor: '#e9967a',
+                                textColor: '#778899',
+                                trailColor: 'rgba(144, 211, 206, 0.938)',
                             })}
                         />
                     </div>

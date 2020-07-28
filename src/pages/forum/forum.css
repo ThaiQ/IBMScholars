@@ -1,0 +1,66 @@
+.app {
+    background-image: url('/photos/yellow-leaf.jpg');
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+}
+
+.side-design {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.community-header {
+    font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 1%;
+}
+
+.form-search {
+    width: 35vw;
+    height: 40px;
+    margin-left: 30px;
+    float: left;
+}
+
+.posts-container {
+    width: auto;
+    padding-right: 2% !important;
+    background-color: rgba(216, 247, 245, 0.938);
+    padding-bottom: 5%;
+}
+
+.ask-q-button {
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-size: 17px !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+  
+.ask-q-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.ask-q-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.ask-q-button:hover span {
+    padding-right: 25px;
+}
+  
+.ask-q-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}

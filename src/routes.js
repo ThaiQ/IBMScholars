@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/homepage/home'
 import ABCLesson from './pages/ABCLesson/ABCLesson';
 import Reward from './pages/RewardPage/rewards';
-import Form from './pages/forms/forms';
 import Autism from './pages/Disabilities/Autism/autism';
 import ADHD from './pages/Disabilities/ADHD/adhd';
 import ABCGame2 from './pages/games/ABCGame2/ABCGame2';
+import Forum from './pages/forum/forum';
 
 export default function Routes(props) {
 
@@ -25,8 +25,8 @@ export default function Routes(props) {
             component: Reward
         },
         {
-            path: '/form',
-            component: Form
+            path: '/forum',
+            component: Forum
         },
         {
             path: '/autism',

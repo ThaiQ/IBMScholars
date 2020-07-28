@@ -34,7 +34,8 @@
 .points-container {
     width: 100%;
     padding: 30px;
-    background-color: rgb(252, 189, 182);
+    /* background-color: rgb(252, 189, 182); */
+    background-color: rgba(209, 255, 252, 0.938);
     grid-area: right;
 }
 
@@ -46,7 +47,8 @@
     grid-area: main;
     padding: 20px;
     text-align: center;
-    background-color: rgb(248, 153, 142);
+    /* background-color: rgb(248, 153, 142); */
+    background-color: rgba(144, 211, 206, 0.938);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
