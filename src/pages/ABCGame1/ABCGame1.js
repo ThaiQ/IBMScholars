@@ -5,7 +5,7 @@ import { Row, Modal, Container, Label, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import Nav from '../../components/navbar/navbar'
 const { base_URL } = require('../../const')
-const {AutismColors} = require('../../const')
+const { AutismColors } = require('../../const')
 class Game extends Component {
     constructor(props) {
         super(props);
@@ -55,11 +55,12 @@ class Game extends Component {
         this.initTheme();
     }
 
-    initTheme () {
+    initTheme() {
         let theme = JSON.parse(localStorage.getItem('theme'))
-        theme && this.setState({theme:theme})
+        theme && this.setState({ theme: theme })
     }
 
+    //Function to randomly generate a letter, for the randomized audio
     generateLetter() {
         if (this.state.call < this.state.practiceChain.length * 4) {
             let num = Math.floor((Math.random() * this.state.practiceChain.length));
@@ -74,9 +75,9 @@ class Game extends Component {
         else {
             alert("You have reached the end!")
         }
-        console.log("generator:", this.state.call)
     }
 
+    //Function to play sound using the Audio library
     playSound = () => {
         console.log("play:", this.state.letter)
         this.setState(
@@ -88,6 +89,7 @@ class Game extends Component {
         );
     }
 
+    //Function to check the student's response
     check() {
         if (this.state.call === 4) {
             this.setState({ toggle: { showModal: true } })
@@ -98,17 +100,18 @@ class Game extends Component {
         }
 
         if (this.state.input === this.state.letter) {
-            alert("great");
+            alert("Great Job!");
             this.generateLetter();
         }
         else {
             this.setState({ call: this.state.call - 1 });
-            alert("Please Try again!");
+            alert("Ooops, Please Try again!");
         }
 
 
     }
 
+    //These functions take care of the break time Modal
     changeInput = (event) => {
         this.setState({ input: event.target.value })
     }
@@ -124,13 +127,13 @@ class Game extends Component {
 
     render() {
         return (
-            <div className="background" style={{backgroundColor:this.state.theme.normal}}>
-                <Nav soundgame={()=>this.initTheme()}/>
+            <div className="background" style={{ backgroundColor: this.state.theme.normal }}>
+                <Nav soundgame={() => this.initTheme()} />
                 <div className="title">
                     <h1 className="page-title">ABC Game!</h1>
                     <h4 className="game-title">Guess the Letter</h4>
                 </div>
-                <div className="instructions-container" style={{backgroundColor:this.state.theme.light}}>
+                <div className="instructions-container" style={{ backgroundColor: this.state.theme.light }}>
                     <Container className="container">
                         {this.state.instructions.map((type, ind) => (
                             <p key={ind} className='instructions-text'>
@@ -166,53 +169,3 @@ class Game extends Component {
 
 export default Game;
 
-// export default function Lesson(props) {
-//     const [letter, setLetter] = useState('a')
-//     const [previous, setPrevious] = useState('not')
-//     const [call, setCall] = useState(0)
-
-//     const practiceChain = [
-//         {
-//             letter: 'a',
-//             success: 0,
-//             call: 0
-//         },
-//         {
-//             letter: 'b',
-//             success: 0,
-//             call: 0
-//         },
-//         {
-//             letter: 'c',
-//             success: 0,
-//             call: 0
-//         }
-//     ]
-
-//     useEffect(() => {
-
-//     }, []);
-
-//     function generateLetter() {
-//         if (call < practiceChain.length * 3) {
-//             let num = Math.floor((Math.random() * practiceChain.length));
-//             if (practiceChain[num].letter === previous || practiceChain[num].call >= 3) return generateLetter()
-//             else {
-//                 practiceChain[num].call = practiceChain[num].call + 1
-//                 setPrevious(practiceChain[num].letter)
-//                 setCall(call + 1)
-//                 return setLetter(practiceChain[num].letter);
-//             }
-
-//         }
-//         console.log('done')
-//     }
-
-//     return (
-//         <div>
-
-//             <Practice letter={letter} generateLetter={generateLetter} />
-
-//         </div>
-//     );
-// }
