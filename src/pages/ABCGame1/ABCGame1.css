@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.background{
+    background-size: 100% 100%;
+    background-image: url('../photos/background2.png');
+    margin: 0 !important;
+    background-position: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    position: absolute;
+    
+}
+
+.page-title, .game-title, .instructions-text, .sound-btn, .submit-btn{
+    font-family: 'Poppins',sans-serif;
+}
+
+.instructions-container{
+    background-color: #1b5c7541;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+.instructions-text{
+    font-size: 20px;
+    text-align: center;
+    display: block; 
+    text-align: left;
+    color: rgb(53, 38, 22);
+    white-space: pre-line;
+}
+
+.sound-btn{
+    display: flex;
+    height: 48px;
+    width: 150px;
+    padding-right: 16px;
+    padding-left: 16px;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    border-radius: 4px;
+    background-color: #2fcaaa;
+    box-shadow: 0 1px 3px 0px rgba(180, 101, 101, 0.05), 0 2px 12px 0px rgba(0,0,0,.1);
+    transition: 200ms ease-out;
+    color: rgb(5, 0, 0);
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.submit-btn{
+    display: flex;
+    height: 48px;
+    width: 150px;
+    padding-right: 16px;
+    padding-left: 16px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    border-radius: 4px;
+    background-color: #37a8e9;
+    box-shadow: 0 1px 3px 0px rgba(180, 101, 101, 0.05), 0 2px 12px 0px rgba(0,0,0,.1);
+    transition: 200ms ease-out;
+    color: rgb(5, 0, 0);
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.entry-field{
+    align-items: center;
+    justify-content: center;
+}
+
+.row-field{
+    padding-top: 10%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.modal-background{
+    background: -moz-linear-gradient(45deg, rgba(242, 34, 50, 0.5), rgba(255, 187, 54, 0.6) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(242, 34, 50, 0.5), rgba(255, 187, 54, 0.6) 100%);
+    background: linear-gradient(to 45deg, rgba(29, 29, 197, 0.4), rgba(96, 0, 136, 0.4) 100%);
+}
+
+.overlay {
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:100%;
+    text-align:center;
+    z-index: 1000;
+}
+.overlay div {
+    width:300px;
+    margin: 100px auto;
+    background-color: #fff;
+    border:1px solid #000;
+    padding:15px;
+    text-align:center;
+}
