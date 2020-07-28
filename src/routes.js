@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/homepage/home'
 import ABCLesson from './pages/ABCLesson/ABCLesson';
 import Reward from './pages/RewardPage/rewards';
-import Form from './pages/forms/forms'
+import Form from './pages/forms/forms';
+import Autism from './pages/Disabilities/Autism/autism';
+import ADHD from './pages/Disabilities/ADHD/adhd';
 
 export default function Routes(props) {
 
@@ -24,6 +26,14 @@ export default function Routes(props) {
         {
             path: '/form',
             component: Form
+        },
+        {
+            path: '/autism',
+            component: Autism
+        },
+        {
+            path: '/adhd',
+            component: ADHD
         }
     ]
 

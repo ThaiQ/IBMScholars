@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import Navbar from "../../../components/navbar/navbar.js";
 import GameLayout from '../Autism/gameLayout.js'
+import './autism.css'
 
 import abc from './pictures/abc.png'
+import matching from './pictures/matching.jpg'
+import phonics from './pictures/phonics.jpg'
 
 
 
@@ -15,18 +18,18 @@ export default class Autism extends Component {
       activities: [
         {
           name: 'ABC Lesson',
-          link: 'https://www.google.com',
+          link: '/lesson',
           pic: abc
         },
         {
           name: 'Matching',
           link: 'https://www.google.com',
-          pic: abc
+          pic: matching
         },
         {
           name: 'Letter Sounds',
           link: 'https://www.google.com',
-          pic: abc
+          pic: phonics
         }
       ]
     };
@@ -43,14 +46,26 @@ export default class Autism extends Component {
       )
     })
     return (
-      <div className='overview' style={{ backgroundColor: 'blue' }}>
+      <div className='overview'>
         <Navbar />
-        <div>
+        <div style={{ width: '100%', margin: 'auto' }}>
+          <div className='autism-page'>
             <ul className="flex-container wrap-reverse">
+           
+        <div className="banner-text">
+              <h1>About Us</h1>
+              <hr />
+              <p className='lead text-center'>
+                {' '}
+                Learn Your ABCs! 
+            </p>
+            </div>
               {activities}
             </ul>
+            </div>
+        
           </div>
         </div>
-    )
-  }
-}
+        )
+      }
+    }
