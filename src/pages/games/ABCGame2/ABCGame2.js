@@ -35,14 +35,18 @@ export default class ABCGame2 extends Component {
           id: "card-c-word",
           word: "Cat"
         }
-      ],
-      aBoard: [],
-      bBoard: [],
-      cBoard: []
+      ]
     };
   }
 
   checkAnswers() {
+    var aBoard = document.getElementById('board-a');
+    var bBoard = document.getElementById('board-b');
+    var cBoard = document.getElementById('board-c');
+
+    
+
+
     console.log("Submitted");
   }
 
