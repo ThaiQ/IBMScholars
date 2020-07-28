@@ -81,15 +81,11 @@ const UserNavbar = props => {
                 Join Us!
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem className="drp-item" href="#">
-                  <NavLink id="user-item" className="user-item" href="#">
-                    Sign Up
-                  </NavLink>
+                <DropdownItem className="drp-item" href="/signUp">
+                  Sign Up
                 </DropdownItem>
-                <DropdownItem className="drp-item" href="#">
-                  <NavLink id="user-item" className="user-item" href="#">
-                    Login
-                  </NavLink>
+                <DropdownItem className="drp-item" href="/login">
+                  Login
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>

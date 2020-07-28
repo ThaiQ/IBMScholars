@@ -1,0 +1,47 @@
+.parent-container {
+    background-color: rgb(181, 237, 245);
+    position: absolute;  
+    top: 0; 
+    left: 0; 
+      
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.form-card {
+    padding: 6%;
+    background-color: rgb(210, 248, 240);
+}
+
+.join-us-container {
+    width: 80vh;
+}
+
+.welcome-header {
+    font-weight: lighter;
+    text-align: center;
+    font-size: 50px;
+}
+
+.row {
+    padding: 10px;
+}
+
+.img-size {
+    width: 100%;
+    min-width: 40px;
+    height: 100%;
+    min-height: 30px;
+}
+
+.avatar {
+ display: grid;
+ padding: 0px;
+}
+
+.submit-button {
+    float: right;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}

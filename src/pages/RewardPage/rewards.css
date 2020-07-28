@@ -12,17 +12,6 @@
     font-weight: bold;
 }
 
-.parent-container {
-    background-color: rgb(168, 137, 98);
-    position: absolute;  
-    top: 0; 
-    left: 0; 
-      
-    /* Preserve aspet ratio */
-    min-width: 100%;
-    min-height: 100%;
-}
-
 .instructions-text {
     font-size: 20px;
 }
