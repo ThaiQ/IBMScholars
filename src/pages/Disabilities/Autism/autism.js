@@ -20,7 +20,7 @@ export default class Autism extends Component {
         },
         {
           name: 'Matching',
-          link: 'https://www.google.com',
+          link: '/matching',
           pic: matching
         },
         {
