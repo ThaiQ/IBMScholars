@@ -56,3 +56,14 @@
   background-color:#d3d3d3 !important;
   outline: none !important;
 }
+
+.link-ref {
+  color: rgb(4, 35, 134);
+  font-weight: bold;
+}
+
+.link-ref:hover {
+  color: rgb(4, 35, 134);
+  cursor: pointer;
+  text-decoration: none;
+}

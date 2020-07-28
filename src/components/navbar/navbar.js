@@ -12,7 +12,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
-
+import { Link } from "react-router-dom";
 import "./navbar.css";
 import logo from "./footprint.png";
 
@@ -63,8 +63,8 @@ const UserNavbar = props => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink id="user-item" className="user-item" href="/reward">
-                Rewards
+              <NavLink id="user-item" className="user-item">
+              <Link className='link-ref' to='/reward'>Rewards</Link>
               </NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
