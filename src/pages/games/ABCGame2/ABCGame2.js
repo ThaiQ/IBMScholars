@@ -35,15 +35,42 @@ export default class ABCGame2 extends Component {
           id: "card-c-word",
           word: "Cat"
         }
-      ],
-      aBoard: [],
-      bBoard: [],
-      cBoard: []
+      ]
     };
   }
 
   checkAnswers() {
-    console.log("Submitted");
+    var aBoard = document.getElementById("board-a");
+    var bBoard = document.getElementById("board-b");
+    var cBoard = document.getElementById("board-c");
+
+    var aBoardArr = Array.prototype.slice.call(aBoard.children);
+    var bBoardArr = Array.prototype.slice.call(bBoard.children);
+    var cBoardArr = Array.prototype.slice.call(cBoard.children);
+
+    var aCard = document.getElementById("card-a");
+    var bCard = document.getElementById("card-b");
+    var cCard = document.getElementById("card-c");
+    var aWordCard = document.getElementById("card-a-word");
+    var bWordCard = document.getElementById("card-b-word");
+    var cWordCard = document.getElementById("card-c-word");
+
+    if (aBoardArr.length > 3 || bBoardArr.length > 3 || cBoardArr.length > 3) {
+      return alert("Oops! Too many cards per picture!");
+    }
+
+    if (
+      !aBoardArr.includes(aCard) ||
+      !aBoardArr.includes(aWordCard) ||
+      !bBoardArr.includes(bCard) ||
+      !bBoardArr.includes(bWordCard) ||
+      !cBoardArr.includes(cCard) ||
+      !cBoardArr.includes(cWordCard)
+    ) {
+      return alert("Oops, almost! Try Again.");
+    } else {
+      return alert("Congrats! You've completed the game!");
+    }
   }
 
   render() {
@@ -76,23 +103,29 @@ export default class ABCGame2 extends Component {
             </Board>
             <Board id="board-a" className="board">
               <img
+                id="apple-pic"
                 className="card-image"
                 src={"https://i.imgur.com/afw4QTR.png"}
                 alt={"apple pic"}
+                draggable="false"
               />
             </Board>
             <Board id="board-b" className="board">
               <img
+                id="banana-pic"
                 className="card-image"
                 src={"https://i.imgur.com/lKcpdPX.png"}
                 alt={"banana pic"}
+                draggable="false"
               />
             </Board>
             <Board id="board-c" className="board">
               <img
+                id="cat-pic"
                 className="card-image"
                 src={"https://i.imgur.com/1D5ZtxD.png"}
                 alt={"cat pic"}
+                draggable="false"
               />
             </Board>
           </main>

@@ -55,14 +55,14 @@ const UserNavbar = props => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem className="drp-item" href="#">
-                <NavLink id="user-item" className="user-item" href="/adhd">
-                  ADHD
-                </NavLink>
+                  <NavLink id="user-item" className="user-item" href="/adhd">
+                    ADHD
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem className="drp-item" href="#">
-                <NavLink id="user-item" className="user-item" href="/autism">
-                  Autism
-                </NavLink>
+                  <NavLink id="user-item" className="user-item" href="/autism">
+                    Autism
+                  </NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -82,10 +82,14 @@ const UserNavbar = props => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem className="drp-item" href="#">
-                  Sign Up
+                  <NavLink id="user-item" className="user-item" href="#">
+                    Sign Up
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem className="drp-item" href="#">
-                  Login
+                  <NavLink id="user-item" className="user-item" href="#">
+                    Login
+                  </NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
