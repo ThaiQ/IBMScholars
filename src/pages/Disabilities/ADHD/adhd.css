@@ -1,4 +1,4 @@
-.autism-page {
+.adhd-page {
   background: rgba(209, 255, 252, 0.938);;
   text-align: center;
   top: 0;
@@ -37,19 +37,4 @@ banner-text {
   font: Comic Sans;
   padding: 25px 50px 75px;
   line-height: 100%;
-}
-
-.meet-team {
-  font-size: 30px;
-}
-
-.meet-header {
-  color: rgb(4, 35, 134);
-  font-size: 50px;
-  text-decoration-line: underline overline;
-  font-weight: bold;
-  margin: 0 auto;
-  text-align: center;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
 }
