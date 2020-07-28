@@ -157,6 +157,7 @@ class Game extends Component {
 
 export default Game;
 
+<<<<<<< HEAD
 // export default function Lesson(props) {
 //     const [letter, setLetter] = useState('a')
 //     const [previous, setPrevious] = useState('not')
@@ -207,3 +208,5 @@ export default Game;
 //         </div>
 //     );
 // }
+=======
+>>>>>>> 48941b0c25ed8ad0ba03e1124415812bfd23708b
