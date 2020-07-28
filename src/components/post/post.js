@@ -6,8 +6,7 @@ import {
 } from "reactstrap";
 const { base_URL } = require('../../const')
 
-export default function Form(props) {
-
+export default function Forum(props) {
     const [reply, setReply] = useState('')
     const [name, setName] = useState('')
     const [comments, setComments] = useState([])
@@ -75,13 +74,12 @@ export default function Form(props) {
 
     return (
         <div>
-
             <div className='box'>
-                <div onClick={() => { toggleModal() }}>
-                    <h3 className='title'>{props.question}</h3>
+                <h3 className='title'>{props.question}</h3>
+                <div className= 'indv-post' onClick={() => { toggleModal() }}>
                     <h4 className='description'>{props.description.length < 100 ? props.description : props.description.slice(0, 90) + '...'}</h4>
+                    <Button style={{float: 'right'}} color="info" onClick={() => props.delete()}><i className="fa fa-trash"/></Button>
                 </div>
-                <Button color="danger" onClick={() => props.delete()}>Delete Post</Button>
             </div>
 
             <Modal isOpen={toggle} toggle={toggleModal}>
@@ -109,7 +107,6 @@ export default function Form(props) {
                     <Button color="secondary" onClick={() => toggleModal()}>Cancel</Button>
                 </ModalFooter>
             </Modal>
-
         </div>
     );
 }

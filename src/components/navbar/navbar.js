@@ -67,8 +67,13 @@ const UserNavbar = props => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink id="user-item" className="user-item">
-              <Link className='link-ref' to='/reward'>Rewards</Link>
+              <NavLink id="user-item" className="user-item" href="/forum">
+                Community Forum
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink id="user-item" className="user-item" href="/reward">
+                Rewards
               </NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>

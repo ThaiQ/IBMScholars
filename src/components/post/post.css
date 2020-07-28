@@ -1,24 +1,33 @@
 .box {
     background-color: rgb(255, 255, 255);
-    width: 80vw;
+    width: auto;
     margin-top: 2vh;
-    margin-left: 11vh;
+    margin-left:2vh;
     margin-bottom: 0px;
-    border: inset 3px white;
+    border: inset 1px white;
     overflow: auto;
 }
 
 .box > div:hover {
     cursor: pointer;
-    background-color: tan;
+    background-color: rgb(250, 253, 205);
 }
 
 .title {
-    color: blue;
+    color: rgb(86, 86, 243);
+    background-color: rgb(235, 234, 202);
     margin: 5px;
+    padding: 1%;
 }
 
 .description {
     color: gray;
-    margin: 5px;
+    margin: 0px;
+}
+
+.indv-post {
+    width: auto;
+    padding-bottom: 4.5%;
+    padding-right: 2%;
+    padding-left: 2%;
 }
