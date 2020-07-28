@@ -1,0 +1,42 @@
+.sound-btn{
+    display: flex;
+    height: 48px;
+    width: 150px;
+    padding-right: 16px;
+    padding-left: 16px;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    border-radius: 4px;
+    background-color: #2fcaaa;
+    box-shadow: 0 1px 3px 0px rgba(180, 101, 101, 0.05), 0 2px 12px 0px rgba(0,0,0,.1);
+    transition: 200ms ease-out;
+    color: rgb(5, 0, 0);
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.submit-btn{
+    display: flex;
+    height: 48px;
+    width: 150px;
+    padding-right: 16px;
+    padding-left: 16px;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    border-radius: 4px;
+    background-color: #37a8e9;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.entry-field{
+    padding: 5%;
+}
