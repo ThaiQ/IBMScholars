@@ -23,10 +23,10 @@ export default class ADHD extends Component {
       <div className='adhd-page'>
         <Navbar adhd={()=>this.initTheme()}/>
         <div style={{ width: '100%', margin: 'auto' }}>
-          <div className='adhd-page'>       
+          <div className='adhd-page' style={{backgroundColor:this.state.theme.light}}>       
         <div className="banner-texts">
               <h1>About Us</h1>
-              <p className='lead text-center'>
+              <p className='lead text-center' style={{backgroundColor:this.state.theme.normal}}>
                 <br/>
                 THIS PAGE IS CURRENTLY UNDER CONSTRUCTION
             </p>           

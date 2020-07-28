@@ -30,6 +30,8 @@ const UserNavbar = props => {
     props.lesson && props.lesson()
     props.autism && props.autism()
     props.adhd && props.adhd()
+    props.matching && props.matching()
+    props.reward && props.reward()
   }, [theme]);
 
   function changeColorSetAutism() {

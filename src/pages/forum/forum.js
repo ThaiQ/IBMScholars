@@ -6,7 +6,7 @@ import UserNavbar from '../../components/navbar/navbar';
 import {
   Modal, ModalHeader, ModalFooter, ModalBody, Button, Input, Container, Row, Col
 } from "reactstrap";
-
+const {AutismColors} = require('../../const')
 const { base_URL } = require('../../const')
 
 export default function Forum(props) {
@@ -15,10 +15,17 @@ export default function Forum(props) {
   const [askToggle, setAskToggle] = useState(false);
   const [question, setQuestion] = useState('')
   const [descriptiontxt, setDescriptiontxt] = useState('')
+  const [theme, setTheme] = useState(AutismColors.blue)
 
   useEffect(() => {
-    getPosts()
+    getPosts();
+    initTheme ();
   }, []);
+
+  function initTheme () {
+    let themeLS = JSON.parse(localStorage.getItem('theme'))
+    themeLS && setTheme(themeLS)
+  }
 
   /**
    * Search for posts with description or question
@@ -90,7 +97,9 @@ export default function Forum(props) {
       <UserNavbar />     
       <h1>Blank Space Ignore</h1>
       <div className = 'side-design'>
-      <Container className = 'posts-container'><h1 className = 'community-header'>Community Forum</h1>
+      <Container className = 'posts-container' style={{backgroundColor:theme.light}}>
+        
+        <h1 className = 'community-header'>Community Forum</h1>
       
       <div style={{marginBottom:'3vh'}}>
         <input className='form-search' placeholder='Search For Posts' onChange={(event) => { search(event.target.value) }} />
@@ -102,7 +111,7 @@ export default function Forum(props) {
       {
         posts.map((post, ixd) => {
           return <Post key={ixd} replies={post.replies} delete={() => { deletePost(post.question) }}
-            question={post.question} description={post.description} />
+            question={post.question} description={post.description} theme={theme}/>
         })
       }
 

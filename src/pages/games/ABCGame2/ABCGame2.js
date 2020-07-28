@@ -3,13 +3,14 @@ import UserNavbar from "../../../components/navbar/navbar";
 import Board from "../../../components/boards-cards/board";
 import Card from "../../../components/boards-cards/card";
 import { Button } from "reactstrap";
-
 import "./ABCGame2.css";
+const {AutismColors} = require('../../../const')
 
 export default class ABCGame2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      theme: AutismColors.blue,
       cards: [
         {
           id: "card-a",
@@ -73,11 +74,20 @@ export default class ABCGame2 extends Component {
     }
   }
 
+  componentDidMount () {
+    this.initTheme ()
+  }
+
+  initTheme () {
+    let theme = JSON.parse(localStorage.getItem('theme'))
+    theme && this.setState({theme:theme})
+  }
+
   render() {
     return (
       <div>
-        <UserNavbar />
-        <div className="abcgame2">
+        <UserNavbar matching={()=>this.initTheme()}/>
+        <div className="abcgame2" style={{background: this.state.theme.normal}}>
           <div className="instructions-banner">
             <h1 className="text-center" style={{ paddingTop: 5 }}>
               ABC Matching Game

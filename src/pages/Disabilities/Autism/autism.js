@@ -55,12 +55,12 @@ export default class Autism extends Component {
         <Navbar autism={()=>this.initTheme()}/>
         <div style={{ width: '100%', margin: 'auto' }}>
           <div className='autism-page'>
-            <ul className="flex-container wrap-reverse">
+            <ul className="flex-container wrap-reverse" style={{backgroundColor: this.state.theme.light}}>
            
         <div className="banner-texts">
               <h1>About Us</h1>
               <hr />
-              <p className='lead text-center'>
+              <p className='lead text-center' style={{backgroundColor: this.state.theme.normal}}>
                 {' '}
                 Learn Your ABCs! 
             </p>
