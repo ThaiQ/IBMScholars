@@ -5,6 +5,15 @@
   font-weight: bold;
 }
 
+.btn > a {
+  color: white;
+}
+
+.btn > a:hover {
+  text-decoration: none;
+  color: white;
+}
+
 .card-wrapper {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
