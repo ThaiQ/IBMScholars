@@ -107,7 +107,7 @@ export default class ABCGame2 extends Component {
           <main className="flexbox flex-container wrap-reverse">
             <Board id="word-board" className="word-board">
               {this.state.cards.map(card => (
-                <Card id={card.id} className="card" draggable="true">
+                <Card id={card.id} className="matching-card" draggable="true">
                   <p>{card.word}</p>
                 </Card>
               ))}

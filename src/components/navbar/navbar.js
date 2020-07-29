@@ -19,66 +19,88 @@ import logo from "./footprint.png";
 import { render } from "@testing-library/react";
 import { link } from "fs";
 
-const { AutismColors, ADHDColors } = require('../../const')
+const { AutismColors, ADHDColors } = require("../../const");
 
 const UserNavbar = props => {
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState(initTheme())
-  const [colorSet, setColorSet] = useState(2)
+  const [theme, setTheme] = useState(initTheme());
+  const [colorSet, setColorSet] = useState(2);
   const toggle = () => setIsOpen(!isOpen);
-  const [user, setUser] = useState()
+  const [user, setUser] = useState();
 
   useEffect(() => {
-    props.home && props.home()
-    props.lesson && props.lesson()
-    props.autism && props.autism()
-    props.adhd && props.adhd()
-    props.matching && props.matching()
-    props.reward && props.reward()
-    props.login && props.login()
-    props.signup && props.signup()
-    props.soundgame && props.soundgame()
-    props.forum && props.forum()
-    initUser()
+    props.home && props.home();
+    props.lesson && props.lesson();
+    props.autism && props.autism();
+    props.adhd && props.adhd();
+    props.matching && props.matching();
+    props.reward && props.reward();
+    props.login && props.login();
+    props.signup && props.signup();
+    props.soundgame && props.soundgame();
+    props.forum && props.forum();
+    initUser();
   }, [theme]);
 
   function changeColorSetAutism() {
-    if (colorSet < 3) setColorSet(colorSet + 1)
-    else setColorSet(1)
-    if (colorSet == 1) setTheme(localStorage.setItem('theme', JSON.stringify(AutismColors.blue)))
-    else if (colorSet == 2) setTheme(localStorage.setItem('theme', JSON.stringify(AutismColors.pink)))
-    else if (colorSet == 3) setTheme(localStorage.setItem('theme', JSON.stringify(AutismColors.yellow)))
-    setTheme(JSON.parse(localStorage.getItem('theme')))
+    if (colorSet < 3) setColorSet(colorSet + 1);
+    else setColorSet(1);
+    if (colorSet == 1)
+      setTheme(
+        localStorage.setItem("theme", JSON.stringify(AutismColors.blue))
+      );
+    else if (colorSet == 2)
+      setTheme(
+        localStorage.setItem("theme", JSON.stringify(AutismColors.pink))
+      );
+    else if (colorSet == 3)
+      setTheme(
+        localStorage.setItem("theme", JSON.stringify(AutismColors.yellow))
+      );
+    setTheme(JSON.parse(localStorage.getItem("theme")));
   }
   function changeColorSetADHD() {
-    if (colorSet < 3) setColorSet(colorSet + 1)
-    else setColorSet(1)
-    if (colorSet == 1) setTheme(localStorage.setItem('theme', JSON.stringify(ADHDColors.blue)))
-    else if (colorSet == 2) setTheme(localStorage.setItem('theme', JSON.stringify(ADHDColors.green)))
-    else if (colorSet == 3) setTheme(localStorage.setItem('theme', JSON.stringify(ADHDColors.orange)))
-    setTheme(JSON.parse(localStorage.getItem('theme')))
+    if (colorSet < 3) setColorSet(colorSet + 1);
+    else setColorSet(1);
+    if (colorSet == 1)
+      setTheme(localStorage.setItem("theme", JSON.stringify(ADHDColors.blue)));
+    else if (colorSet == 2)
+      setTheme(localStorage.setItem("theme", JSON.stringify(ADHDColors.green)));
+    else if (colorSet == 3)
+      setTheme(
+        localStorage.setItem("theme", JSON.stringify(ADHDColors.orange))
+      );
+    setTheme(JSON.parse(localStorage.getItem("theme")));
   }
 
   function initTheme() {
-    let theme = JSON.parse(localStorage.getItem('theme'))
-    return theme || AutismColors.blue
+    let theme = JSON.parse(localStorage.getItem("theme"));
+    return theme || AutismColors.blue;
   }
 
   function initUser() {
-    let user = JSON.parse(localStorage.getItem('user'))
-    user && setUser(user)
-  }
-  
-  function loggedOut() {
-    localStorage.setItem('user', JSON.stringify(''))
-    setUser('')
+    let user = JSON.parse(localStorage.getItem("user"));
+    user && setUser(user);
   }
 
-  console.log(props.changeLogin, props)
+  function loggedOut() {
+    localStorage.setItem("user", JSON.stringify(""));
+    setUser("");
+  }
+
+  console.log(props.changeLogin, props);
   return (
-    <div style={theme ? { backgroundColor: theme.dark, color: theme.light } : {}} className="user-navbar">
+    <div
+      style={theme ? { backgroundColor: theme.dark, color: theme.light } : {}}
+      className="user-navbar"
+    >
       <Navbar light expand="md">
-        <NavbarBrand style={{ color: theme.light }} className="nav-brand" id="nav-brand" href="/">
+        <NavbarBrand
+          style={{ color: theme.light }}
+          className="nav-brand"
+          id="nav-brand"
+          href="/"
+        >
           EPIC Education
           <img id="logo-image" src={logo} alt={"eedu logo"} />
         </NavbarBrand>
@@ -86,48 +108,95 @@ const UserNavbar = props => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto d-flex align-items-end ibm-nav" navbar>
             <NavItem>
-              <NavLink style={{ color: theme.light }}
+              <NavLink
+                style={{ color: theme.light }}
                 id="user-item"
                 className="user-item"
                 href="#"
               >
-                Color: <div style={{ display: 'inline' }} onClick={() => changeColorSetAutism()}> Autism</div> |
-                <div style={{ display: 'inline' }} onClick={() => changeColorSetADHD()}> ADHD</div>
+                Color:{" "}
+                <div
+                  style={{ display: "inline" }}
+                  onClick={() => changeColorSetAutism()}
+                >
+                  {" "}
+                  Autism
+                </div>{" "}
+                |
+                <div
+                  style={{ display: "inline" }}
+                  onClick={() => changeColorSetADHD()}
+                >
+                  {" "}
+                  ADHD
+                </div>
               </NavLink>
             </NavItem>
-{
-  user ? <UncontrolledDropdown nav inNavbar>
-  <DropdownToggle id="user-item" className="user-item" nav caret style={{ color: theme.light }}>
-    Activities
-  </DropdownToggle>
-  <DropdownMenu right>
-    <DropdownItem className="drp-item" href="#">
-      <NavLink>
-        <Link id="user-item" className="user-item" to="/adhd" style={{ color: theme.dark }}>
-          ADHD
-    </Link>
-      </NavLink>
-    </DropdownItem>
-    <DropdownItem className="drp-item" href="#">
-      <NavLink>
-        <Link id="user-item" className="user-item" to="/autism" style={{ color: theme.dark }}>
-          Autism
-    </Link>
-      </NavLink>
-    </DropdownItem>
-  </DropdownMenu>
-</UncontrolledDropdown> : ''
-}
+            {user ? (
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle
+                  id="user-item"
+                  className="user-item"
+                  nav
+                  caret
+                  style={{ color: theme.light }}
+                >
+                  Activities
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem className="drp-item" href="#">
+                    <NavLink>
+                      <Link
+                        id="user-item"
+                        className="user-item"
+                        to="/adhd"
+                        style={{ color: theme.dark }}
+                      >
+                        ADHD
+                      </Link>
+                    </NavLink>
+                  </DropdownItem>
+                  <DropdownItem className="drp-item" href="#">
+                    <NavLink>
+                      <Link
+                        id="user-item"
+                        className="user-item"
+                        to="/autism"
+                        style={{ color: theme.dark }}
+                      >
+                        Autism
+                      </Link>
+                    </NavLink>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            ) : (
+              ""
+            )}
             <NavItem>
-              {
-                user ? <NavLink id="user-item" className="user-item">
-                <Link className='link-ref' to='/reward' style={{ color: theme.light }}>Rewards</Link>
-              </NavLink> : ''
-              }
+              {user ? (
+                <NavLink id="user-item" className="user-item">
+                  <Link
+                    className="link-ref"
+                    to="/reward"
+                    style={{ color: theme.light }}
+                  >
+                    Rewards
+                  </Link>
+                </NavLink>
+              ) : (
+                ""
+              )}
             </NavItem>
             <NavItem>
               <NavLink id="user-item" className="user-item">
-                <Link className='link-ref' to='/forum' style={{ color: theme.light }}>Community Forum</Link>
+                <Link
+                  className="link-ref"
+                  to="/forum"
+                  style={{ color: theme.light }}
+                >
+                  Community Forum
+                </Link>
               </NavLink>
             </NavItem>
             {
