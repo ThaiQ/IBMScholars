@@ -133,7 +133,7 @@ const UserNavbar = props => {
             {
               user ? <NavLink><Link to = '/' id="user-item" className="user-item" style={{ color: theme.light }} onClick = {() => {loggedOut()}}>
               
-              Logged Out
+              Log Out
          
               </Link> </NavLink>: 
                <UncontrolledDropdown nav inNavbar>
