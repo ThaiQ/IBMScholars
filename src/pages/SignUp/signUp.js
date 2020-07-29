@@ -3,6 +3,7 @@ import './signUp.css';
 import { Label, Row, Col, Button, Container, Input, CardImg, Card } from 'reactstrap';
 import { Link } from 'react-router-dom'
 import UserNavbar from '../../components/navbar/navbar';
+const {AutismColors} = require('../../const')
 
 const renderYear = (years, ind) => {
     return (
@@ -14,6 +15,7 @@ class SignUp extends Component {
     constructor(props){
         super(props);
         this.state = {
+            theme: AutismColors.blue,
             years : [
                 { year: '2013' },
                 { year: '2014' },
@@ -29,17 +31,26 @@ class SignUp extends Component {
         }
     }
 
+    componentDidMount () {
+        this.initTheme ()
+      }
+    
+      initTheme () {
+        let theme = JSON.parse(localStorage.getItem('theme'))
+        theme && this.setState({theme:theme})
+      }
+
     render(){
         return (
-            <div className = 'parent-container'>
-                <div><UserNavbar /></div>
+            <div className = 'parent-container' style={{backgroundColor:this.state.theme.normal}}>
+                <div><UserNavbar signup={()=>this.initTheme()}/></div>
                 <br></br>
                 <h1>Hi</h1>
                 <br></br>
                 <div className = 'welcome-header'> Welcome </div>
                 <br></br>
-                <Container className = 'join-us-container'>
-                    <div className = 'form-card'>
+                <Container className = 'join-us-container' style={{backgroundColor:this.state.theme.light}}>
+                    <div className = 'form-card' style={{backgroundColor:this.state.theme.light}}>
                         <h2> Sign Up with Us! 📚</h2>
                         <hr /> 
                         <Row className = 'row'>
@@ -103,11 +114,11 @@ class SignUp extends Component {
                         <Row>
                             <Col>
                                 <Link to = '/login'>
-                                    <Button theme color = 'info'>Login Instead</Button>
+                                    <Button theme style={{backgroundColor:this.state.theme.dark}}>Login Instead</Button>
                                 </Link>
                             </Col>
                             <Col>
-                                <Button theme color = 'info' className = 'submit-button'>Submit</Button>
+                                <Button theme style={{backgroundColor:this.state.theme.dark}} className = 'submit-button'>Submit</Button>
                             </Col>
                         </Row>
                     </div>

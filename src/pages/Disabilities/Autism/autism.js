@@ -25,7 +25,7 @@ export default class Autism extends Component {
         },
         {
           name: 'Letter Sounds',
-          link: 'https://www.google.com',
+          link: '/soundgame',
           pic: phonics
         }
       ]

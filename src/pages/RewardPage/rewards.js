@@ -137,12 +137,12 @@ class Rewards extends Component {
 
     render() {
         return (
-            <div className='parent-container'>
+            <div className='parent-container' style={{ backgroundColor: this.state.theme.normal }}>
                 <div><UserNavbar reward={() => this.initTheme()} /></div>
                 <h2>REWARD</h2>
                 <br></br>
                 <div className="grid-container">
-                    <div className='reward-container' style={{ backgroundColor: this.state.theme.normal }}>
+                    <div className='reward-container'>
                         {this.state.rewardType.map((type, ind) => (
                             <div className='reward-card-wrapper' key={ind}>
                                 <Card outline color="warning" className='indv-card'>

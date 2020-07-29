@@ -32,6 +32,9 @@ const UserNavbar = props => {
     props.adhd && props.adhd()
     props.matching && props.matching()
     props.reward && props.reward()
+    props.login && props.login()
+    props.signup && props.signup()
+    props.soundgame && props.soundgame()
   }, [theme]);
 
   function changeColorSetAutism() {
@@ -71,8 +74,8 @@ const UserNavbar = props => {
                 className="user-item"
                 href="#"
               >
-                Color: <div style={{display:'inline'}} onClick={() => changeColorSetAutism()}> Autism</div> | 
-                <div style={{display:'inline'}} onClick={() => changeColorSetADHD()}> ADHD</div>
+                Color: <div style={{ display: 'inline' }} onClick={() => changeColorSetAutism()}> Autism</div> |
+                <div style={{ display: 'inline' }} onClick={() => changeColorSetADHD()}> ADHD</div>
               </NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
@@ -81,14 +84,18 @@ const UserNavbar = props => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem className="drp-item" href="#">
-                  <NavLink id="user-item" className="user-item" href="/adhd" style={{ color: theme.dark }}>
-                    ADHD
-                </NavLink>
+                  <NavLink>
+                    <Link id="user-item" className="user-item" to="/adhd" style={{ color: theme.dark }}>
+                      ADHD
+                </Link>
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem className="drp-item" href="#">
-                  <NavLink id="user-item" className="user-item" href="/autism" style={{ color: theme.dark }}>
-                    Autism
-                </NavLink>
+                  <NavLink>
+                    <Link id="user-item" className="user-item" to="/autism" style={{ color: theme.dark }}>
+                      Autism
+                </Link>
+                  </NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -98,8 +105,8 @@ const UserNavbar = props => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink id="user-item" className="user-item" href="/forum" style={{ color: theme.light }}>
-                Community Forum
+              <NavLink id="user-item" className="user-item">
+                <Link className='link-ref' to='/forum' style={{ color: theme.light }}>Community Forum</Link>
               </NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
@@ -107,11 +114,15 @@ const UserNavbar = props => {
                 Join Us!
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem className="user-item" href="/signUp" style={{ color: theme.dark }}>
-                  Sign Up
+                <DropdownItem className="user-item" style={{ color: theme.dark }}>
+                  <Link to="/signUp">
+                    Sign Up
+                  </Link>
                 </DropdownItem>
-                <DropdownItem className="user-item" href="/login" style={{ color: theme.dark }}>
-                  Login
+                <DropdownItem className="user-item" style={{ color: theme.dark }}>
+                  <Link to="/login">
+                    Login
+                  </Link>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
