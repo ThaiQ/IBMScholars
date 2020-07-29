@@ -75,7 +75,7 @@ export default function Forum(props) {
     return (
         <div>
             <div className='box'>
-                <h3 className='title'>{props.question}</h3>
+                <h3 className='title' style={{backgroundColor:props.theme.normal}}>{props.question}</h3>
                 <div className= 'indv-post' onClick={() => { toggleModal() }}>
                     <h4 className='description'>{props.description.length < 100 ? props.description : props.description.slice(0, 90) + '...'}</h4>
                     <Button style={{float: 'right'}} color="info" onClick={() => props.delete()}><i className="fa fa-trash"/></Button>

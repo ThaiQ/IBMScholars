@@ -52,7 +52,7 @@ export default function Routes(props) {
             component: Login
         },
         {
-            path: '/game1',
+            path: '/soundgame',
             component: Game
         }
     ]

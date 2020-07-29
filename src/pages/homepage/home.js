@@ -8,14 +8,14 @@ import annabel from '../homepage/pictures/annabel.jpeg';
 import seema from '../homepage/pictures/seema.jpg'
 import surabhi from '../homepage/pictures/surabhi.png'
 import thai from '../homepage/pictures/thai.png'
-
+const {AutismColors} = require('../../const')
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       activeTab: '1',
-
+      theme: AutismColors.blue,
       creators: [
         {
           name: 'Nanar Boursalian',
@@ -46,19 +46,27 @@ export default class Home extends Component {
     };
   }
 
+  componentDidMount () {
+    this.initTheme ()
+  }
+
+  initTheme () {
+    let theme = JSON.parse(localStorage.getItem('theme'))
+    theme && this.setState({theme:theme})
+  }
+
   render() {
     let creatorCards = this.state.creators.map(creators => {
       return (
         <li className="flex-item">
           <TeamCard creators={creators} />
         </li>
-
       )
     })
     return (
-      <div className='overview' style={{ backgroundColor: 'blue' }}>
-        <UserNavbar />
-        <div style={{ width: '100%', margin: 'auto' }}>
+      <div className='overview'>
+        <UserNavbar home={()=>this.initTheme()}/>
+        <div style={{ width: '100%', margin: 'auto', backgroundColor: this.state.theme.light }}>
           <div className="landing-grid">
             <img
               src={titlePage}
@@ -75,13 +83,13 @@ export default class Home extends Component {
                 for these students.
             </p>
             </div>
-            <div className='meet-header'>
+            <div className='meet-header' style={{color:this.state.theme.dark}}>
               Meet the Team
             </div>
             <p className='info'>Our team includes 5 young developers who hope to make a positive difference
             using their technical skills. This platform runs entirely on the IBM cloud.
             </p>
-            <ul className="flex-container wrap-reverse">
+            <ul className="flex-container wrap-reversez">
               {creatorCards}
             </ul>
           </div>
