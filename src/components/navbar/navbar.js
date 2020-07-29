@@ -22,6 +22,7 @@ const { AutismColors, ADHDColors } = require('../../const')
 const UserNavbar = props => {
   const [isOpen, setIsOpen] = useState(false);
   const [theme, setTheme] = useState(initTheme())
+  const [login, setLogin] = useState(false);
   const [colorSet, setColorSet] = useState(2)
   const toggle = () => setIsOpen(!isOpen);
 
