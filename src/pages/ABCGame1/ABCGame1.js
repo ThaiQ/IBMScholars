@@ -99,7 +99,7 @@ class Game extends Component {
             alert("You have reached the end!");
         }
 
-        else if (this.state.input === this.state.letter) {
+        else if (this.state.input.toLowerCase() === this.state.letter.toLowerCase()) {
             alert("Great Job!");
             this.generateLetter();
         }
