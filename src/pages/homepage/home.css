@@ -1,5 +1,4 @@
 .landing-grid {
-  background: #a6dbf7;
   text-align: center;
   top: 0;
   left: 0;
@@ -77,7 +76,7 @@
   display: flex;
 }
 
-.wrap-reverse {
+.wrap-reversez {
   -webkit-flex-wrap: wrap-reverse;
   flex-wrap: wrap;
   justify-content: center;

@@ -3,8 +3,9 @@ import axios from 'axios';
 import './ABCGame1.css';
 import { Row, Modal, Container, Label, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import Nav from '../../components/navbar/navbar'
 const { base_URL } = require('../../const')
-
+const {AutismColors} = require('../../const')
 class Game extends Component {
     constructor(props) {
         super(props);
@@ -13,6 +14,7 @@ class Game extends Component {
             toggle: {
                 showModal: false,
             },
+            theme: AutismColors.blue,
             letter: '',
             previous: 'not',
             call: 0,
@@ -50,6 +52,12 @@ class Game extends Component {
 
     componentDidMount() {
         this.generateLetter();
+        this.initTheme();
+    }
+
+    initTheme () {
+        let theme = JSON.parse(localStorage.getItem('theme'))
+        theme && this.setState({theme:theme})
     }
 
     generateLetter() {
@@ -116,12 +124,13 @@ class Game extends Component {
 
     render() {
         return (
-            <div className="background">
+            <div className="background" style={{backgroundColor:this.state.theme.normal}}>
+                <Nav soundgame={()=>this.initTheme()}/>
                 <div className="title">
                     <h1 className="page-title">ABC Game!</h1>
                     <h4 className="game-title">Guess the Letter</h4>
                 </div>
-                <div className="instructions-container">
+                <div className="instructions-container" style={{backgroundColor:this.state.theme.light}}>
                     <Container className="container">
                         {this.state.instructions.map((type, ind) => (
                             <p key={ind} className='instructions-text'>
