@@ -94,3 +94,8 @@
   font-size: 24px !important;
   padding: 15px !important;
 }
+
+#game2-submit {
+  color: black !important;
+  font-weight: 400;
+}

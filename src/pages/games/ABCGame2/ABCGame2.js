@@ -4,7 +4,8 @@ import Board from "../../../components/boards-cards/board";
 import Card from "../../../components/boards-cards/card";
 import { Button } from "reactstrap";
 import "./ABCGame2.css";
-const {AutismColors} = require('../../../const')
+import { Link } from "react-router-dom";
+const { AutismColors } = require('../../../const')
 
 export default class ABCGame2 extends Component {
   constructor(props) {
@@ -74,20 +75,20 @@ export default class ABCGame2 extends Component {
     }
   }
 
-  componentDidMount () {
-    this.initTheme ()
+  componentDidMount() {
+    this.initTheme()
   }
 
-  initTheme () {
+  initTheme() {
     let theme = JSON.parse(localStorage.getItem('theme'))
-    theme && this.setState({theme:theme})
+    theme && this.setState({ theme: theme })
   }
 
   render() {
     return (
       <div>
-        <UserNavbar matching={()=>this.initTheme()}/>
-        <div className="abcgame2" style={{background: this.state.theme.normal}}>
+        <UserNavbar matching={() => this.initTheme()} />
+        <div className="abcgame2" style={{ background: this.state.theme.normal }}>
           <div className="instructions-banner">
             <h1 className="text-center" style={{ paddingTop: 5 }}>
               ABC Matching Game
@@ -139,8 +140,8 @@ export default class ABCGame2 extends Component {
               />
             </Board>
           </main>
-          <Button className="the-btns" href="/matching">
-            Start Over
+          <Button className="the-btns">
+            <Link to="autism" id='game2-submit'>Back</Link>
           </Button>
           <Button
             onClick={() => {
