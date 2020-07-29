@@ -19,8 +19,7 @@ export default function Forum(props) {
 
   useEffect(() => {
     getPosts();
-    initTheme ();
-  }, []);
+  }, [theme]);
 
   function initTheme () {
     let themeLS = JSON.parse(localStorage.getItem('theme'))
@@ -94,7 +93,7 @@ export default function Forum(props) {
 
   return (
     <div className='app'>
-      <UserNavbar />     
+      <UserNavbar forum={()=>{initTheme()}}/>     
       <h1>Blank Space Ignore</h1>
       <div className = 'side-design'>
       <Container className = 'posts-container' style={{backgroundColor:theme.light}}>
