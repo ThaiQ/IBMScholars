@@ -1,4 +1,4 @@
-.text-set{
+.text-set {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 30px;
@@ -14,11 +14,20 @@
   color: white;
 }
 
-.card-wrapper {
+.card-wrappers {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   flex-wrap: wrap;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
-  min-width: 400px;
+  width: 400px;
+}
+
+.pic-dims {
+  height: 400px !important;
+  width: 399px !important;
+}
+
+.flex-items {
+  padding: 20px;
 }
