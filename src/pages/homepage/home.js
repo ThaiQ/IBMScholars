@@ -23,9 +23,9 @@ export default class Home extends Component {
           pic: nanar
         },
         {
-          name: 'Seema Vora',
-          Linkedin: 'https://www.linkedin.com/in/seemasvora/',
-          pic: seema
+          name: 'Annabel Kusumo',
+          Linkedin: 'https://www.linkedin.com/in/annabelkusumo/',
+          pic: annabel
         },
         {
           name: 'Thai Quach',
@@ -38,9 +38,9 @@ export default class Home extends Component {
           pic: surabhi
         },
         {
-          name: 'Annabel Kusumo',
-          Linkedin: 'https://www.linkedin.com/in/annabelkusumo/',
-          pic: annabel
+          name: 'Seema Vora',
+          Linkedin: 'https://www.linkedin.com/in/seemasvora/',
+          pic: seema
         }
       ]
     };
@@ -58,7 +58,7 @@ export default class Home extends Component {
   render() {
     let creatorCards = this.state.creators.map(creators => {
       return (
-        <li className="flex-item">
+        <li className = 'spacing'>
           <TeamCard creators={creators} />
         </li>
       )
@@ -68,12 +68,13 @@ export default class Home extends Component {
         <UserNavbar home={()=>this.initTheme()}/>
         <div style={{ width: '100%', margin: 'auto', backgroundColor: this.state.theme.light }}>
           <div className="landing-grid">
+            <h1>Hi there</h1>
             <img
               src={titlePage}
               className="homepage-img"
               alt="homepage image"
             />
-            <div className="banner-text">
+            <div style={{ backgroundColor: this.state.theme.normal }} className="banner-text">
               <h1>About Us</h1>
               <hr />
               <p className='lead text-center'>
@@ -89,7 +90,7 @@ export default class Home extends Component {
             <p className='info'>Our team includes 5 young developers who hope to make a positive difference
             using their technical skills. This platform runs entirely on the IBM cloud.
             </p>
-            <ul className="flex-container wrap-reversez">
+            <ul className="flex-container">
               {creatorCards}
             </ul>
           </div>

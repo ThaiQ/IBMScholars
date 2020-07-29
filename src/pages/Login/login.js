@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './login.css';
 import { Label, Row, Col, Button, Container, Input } from 'reactstrap';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import UserNavbar from '../../components/navbar/navbar';
 import { get } from 'http';
 const { AutismColors } = require('../../const')
@@ -65,10 +65,9 @@ class Login extends Component {
                             </Col>
                             <Col>
                                 <Button onClick={() => { this.loggedIn() }} theme style={{ backgroundColor: this.state.theme.dark }} className='submit-button'>
-                                    <Link to='/'>
+                                <Link to='/'>
                                         Login
                                 </Link>
-
                                 </Button>
                             </Col>
                         </Row>

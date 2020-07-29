@@ -16,16 +16,23 @@
   font-size: 18px;
 }
 
-.card-wrapper {
+#card-wrapper-home {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  flex-wrap: wrap;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  text-align: center;
-  min-width: 400px;
+  justify-content: space-evenly;
+  font-size: large;
+  max-width: 220px;
+  min-width: 220px;
 }
 
+#card-size {
+  width: 250px !important;
+} 
+
 .pic-dim {
-  width: 400px !important;
-  height: 400px !important;
+  width: 220px !important;
+  height: 220px !important;
+  padding-left: 10%;
+  padding-top: 10%;
 }
