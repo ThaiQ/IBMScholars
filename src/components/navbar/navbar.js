@@ -47,10 +47,11 @@ const UserNavbar = props => {
     setTheme(JSON.parse(localStorage.getItem('theme')))
   }
   function changeColorSetADHD() {
-    if (colorSet < 2) setColorSet(colorSet + 1)
+    if (colorSet < 3) setColorSet(colorSet + 1)
     else setColorSet(1)
     if (colorSet == 1) setTheme(localStorage.setItem('theme', JSON.stringify(ADHDColors.blue)))
     else if (colorSet == 2) setTheme(localStorage.setItem('theme', JSON.stringify(ADHDColors.green)))
+    else if (colorSet == 3) setTheme(localStorage.setItem('theme', JSON.stringify(ADHDColors.orange)))
     setTheme(JSON.parse(localStorage.getItem('theme')))
   }
 

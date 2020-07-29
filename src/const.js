@@ -5,30 +5,35 @@ const base_URL = process.env.NODE_ENV === 'production' ?
     pink : {
       dark : "#9c6176",
       normal : "#f9bad0",
-      light : "#ffcaf7"
+      light : "#ffe6f2"
     },
     yellow : {
       dark : "#bdb34f",
-      normal : "#fff698",
-      light : "#fcf4b3"
+      normal : "#efd35a",
+      light : "#fbfbd0",
     },
     blue : {
-      dark : "rgb(4, 35, 134)",
-      normal : "rgba(95, 182, 176, 0.938)",
-      light : "rgb(209, 255, 252, 0.938)"
+      dark : "#1f8aad",
+      normal: "#9fdfdf",
+      light : "#e6f9ff"
     }
   }
   
   const ADHDColors = {
     green : {
-      dark : "#009423",
-      normal : "#2bff00",
-      light : "#60fc84"
+      dark : "#4d8644",
+      normal : "#8cc28c",
+      light : "#bddbbd"
     },
     blue : {
-      dark : "#28008c",
-      normal : "#4400ff",
-      light : "rgb(209, 255, 252, 0.938)"
+      dark : "#334d99",
+      normal : "#668ccc",
+      light : "#c6d8ec"
+    },
+    orange : {
+      dark : ' #cc8033',
+      normal : ' #ffbf80',
+      light : '#ffe6cc',
     }
   }
 

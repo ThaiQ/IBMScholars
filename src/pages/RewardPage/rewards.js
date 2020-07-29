@@ -145,7 +145,7 @@ class Rewards extends Component {
                     <div className='reward-container'>
                         {this.state.rewardType.map((type, ind) => (
                             <div className='reward-card-wrapper' key={ind}>
-                                <Card outline color="warning" className='indv-card'>
+                                <Card style={{ backgroundColor: this.state.theme.light }} className='indv-card'>
                                     <CardHeader className='card-header'>{type.item}</CardHeader>
                                     <CardImg className='img' top width="100%" src={type.img} alt="Card image cap" />
                                     <CardBody>
