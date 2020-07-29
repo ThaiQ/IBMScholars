@@ -28,7 +28,6 @@
 .posts-container {
     width: auto;
     padding-right: 2% !important;
-    background-color: rgba(216, 247, 245, 0.938);
     padding-bottom: 5%;
 }
 
@@ -38,6 +37,8 @@
     cursor: pointer;
     font-size: 17px !important;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    float: right;
+    margin-right: 3vw;
 }
   
 .ask-q-button span {
