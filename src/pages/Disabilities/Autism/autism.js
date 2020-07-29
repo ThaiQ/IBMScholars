@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Navbar from "../../../components/navbar/navbar.js";
 import GameLayout from "../Autism/gameLayout.js";
 import "./disabilities.css";
-import abc from "./pictures/abc.png";
+import abc from "./pictures/abc-blocks1.png";
 import matching from "./pictures/matching.jpg";
-import phonics from "./pictures/phonics.jpg";
+import phonics from "./pictures/writing-abc.jpg";
 const { AutismColors } = require("../../../const");
 export default class Autism extends Component {
   constructor(props) {
@@ -53,10 +53,9 @@ export default class Autism extends Component {
       <div className="overview">
         <Navbar autism={() => this.initTheme()} />
         <div style={{ width: "100%", margin: "auto" }}>
-          <div className="autism-page">
+          <div style={{ backgroundColor: this.state.theme.light }} className="autism-page">
             <ul
               className="flex-container wrap-reversez"
-              style={{ backgroundColor: this.state.theme.light }}
             >
               <div className="banner-texts">
                 <h1>About Us</h1>
