@@ -35,6 +35,7 @@ const UserNavbar = props => {
     props.login && props.login()
     props.signup && props.signup()
     props.soundgame && props.soundgame()
+    props.forum && props.forum()
   }, [theme]);
 
   function changeColorSetAutism() {
