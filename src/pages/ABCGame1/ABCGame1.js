@@ -95,11 +95,11 @@ class Game extends Component {
             this.setState({ toggle: { showModal: true } })
         }
 
-        if (this.state.call === 8) {
+        if (this.state.call === 7) {
             alert("You have reached the end!");
         }
 
-        if (this.state.input === this.state.letter) {
+        if (this.state.input.toLowerCase === this.state.letter.toLowerCase) {
             alert("Great Job!");
             this.generateLetter();
         }
@@ -127,11 +127,14 @@ class Game extends Component {
 
     render() {
         return (
-            <div className="background" style={{ backgroundColor: this.state.theme.normal }}>
+            <div className="background" style={{ backgroundColor: this.state.theme.normal, color: this.state.theme.light }}>
                 <Nav soundgame={() => this.initTheme()} />
-                <div className="title">
-                    <h1 className="page-title">ABC Game!</h1>
-                    <h4 className="game-title">Guess the Letter</h4>
+                <div className="game1-title">
+                    <h1 className="page-title">ABC Game</h1>
+                    <Row>
+                        <h4 className="game-title">Guess the Letter!</h4>
+                        <img className="title-icon" src="https://i.imgur.com/KSqLZU9.png" />
+                    </Row>
                 </div>
                 <div className="instructions-container" style={{ backgroundColor: this.state.theme.light }}>
                     <Container className="container">
@@ -146,7 +149,7 @@ class Game extends Component {
                 <div className="entry-field">
                     <Row className="row-field">
                         <Link className="sound-btn" onClick={this.playSound}>Play Sound!</Link>
-                        <input onChange={this.changeInput} />
+                        <input className="input-field" onChange={this.changeInput} />
                         <Link className="submit-btn" onClick={this.check}> Submit  </Link>
                     </Row>
                 </div>
