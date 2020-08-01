@@ -59,3 +59,11 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+#autism:hover {
+  text-decoration: underline;
+}
+
+#adhd:hover {
+  text-decoration: underline;
+}

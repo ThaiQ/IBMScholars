@@ -11,7 +11,7 @@ export default class GameLayout extends Component {
           <CardImg className='pic-dims' src={this.props.activities.pic} alt="Card image cap" />
           <CardBody>
             <CardTitle className='text-set'>{this.props.activities.name}</CardTitle>
-            <Button><Link to={this.props.activities.link}>Click Here to Begin!</Link></Button>
+            <Link to={this.props.activities.link}><Button>Click Here to Begin!</Button></Link>
           </CardBody>
         </Card>
       </div>

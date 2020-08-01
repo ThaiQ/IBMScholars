@@ -118,6 +118,7 @@ const UserNavbar = props => {
                 <div
                   style={{ display: "inline" }}
                   onClick={() => changeColorSetAutism()}
+                  id = 'autism'
                 >
                   {" "}
                   Autism
@@ -126,6 +127,7 @@ const UserNavbar = props => {
                 <div
                   style={{ display: "inline" }}
                   onClick={() => changeColorSetADHD()}
+                  id = 'adhd'
                 >
                   {" "}
                   ADHD
@@ -144,30 +146,32 @@ const UserNavbar = props => {
                   Activities
                 </DropdownToggle>
                 <DropdownMenu right>
+                  <Link to='/adhd'>
                   <DropdownItem className="drp-item" href="#">
                     <NavLink>
-                      <Link
+                      <div
                         id="user-item"
                         className="user-item"
-                        to="/adhd"
                         style={{ color: theme.dark }}
                       >
                         ADHD
-                      </Link>
+                      </div>
                     </NavLink>
                   </DropdownItem>
+                  </Link>
+                  <Link to='/autism'>
                   <DropdownItem className="drp-item" href="#">
                     <NavLink>
-                      <Link
+                      <div
                         id="user-item"
                         className="user-item"
-                        to="/autism"
                         style={{ color: theme.dark }}
                       >
                         Autism
-                      </Link>
+                      </div>
                     </NavLink>
                   </DropdownItem>
+                  </Link>
                 </DropdownMenu>
               </UncontrolledDropdown>
             ) : (

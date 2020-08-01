@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './login.css';
-import { Label, Row, Col, Button, Container, Input } from 'reactstrap';
+import {
+    Label, Row, Col, Button, Container, Input,
+    Modal, ModalHeader, ModalBody, ModalFooter
+} from 'reactstrap';
 import { Link } from 'react-router-dom';
 import UserNavbar from '../../components/navbar/navbar';
-import { get } from 'http';
 const { AutismColors } = require('../../const')
-
-
 
 class Login extends Component {
     constructor(props) {
@@ -14,14 +14,20 @@ class Login extends Component {
         this.state = {
             theme: AutismColors.blue,
             isLogin: false,
-            fakeLogin: { name: 'Bob', username: 'IBM', password: 'IBM2020' }
-
+            fakeLogin: {
+                name: 'Bob',
+                username: 'IBM',
+                password: 'IBM2020',
+                points: 100
+            },
+            modal: true
         }
     }
 
     loggedIn() {
         localStorage.setItem('user', JSON.stringify(this.state.fakeLogin))
     }
+
     componentDidMount() {
         this.initTheme()
     }
@@ -29,6 +35,10 @@ class Login extends Component {
     initTheme() {
         let theme = JSON.parse(localStorage.getItem('theme'))
         theme && this.setState({ theme: theme })
+    }
+
+    toggleModal() {
+        this.setState({ modal: !this.state.modal })
     }
 
     render() {
@@ -48,12 +58,14 @@ class Login extends Component {
                         <Input
                             type='text'
                             placeholder='Enter your username'
+                            value='CLICK LOGIN BELOW'
                         >
                         </Input>
                         <Label>Password</Label>
                         <Input
                             type='password'
                             placeholder='********'
+                            value='MOCKED - PASSWORD'
                         >
                         </Input>
                         <hr />
@@ -64,15 +76,30 @@ class Login extends Component {
                                 </Link>
                             </Col>
                             <Col>
-                                <Button onClick={() => { this.loggedIn() }} theme style={{ backgroundColor: this.state.theme.dark }} className='submit-button'>
                                 <Link to='/'>
+                                    <Button onClick={() => { this.loggedIn() }} theme style={{ backgroundColor: this.state.theme.dark }} className='submit-button'>
                                         Login
-                                </Link>
                                 </Button>
+                                </Link>
                             </Col>
                         </Row>
                     </div>
                 </Container>
+
+                <Modal isOpen={this.state.modal} toggle={() => { this.toggleModal() }}>
+                    <ModalHeader toggle={() => { this.toggleModal() }}>Demo-Notification</ModalHeader>
+                    <ModalBody>
+                        For demo purposes and your conveniences, we had disabled login. Click below or
+                        "Login" to access a mock account.
+                    </ModalBody>
+                    <ModalFooter>
+                        <Link to='/'>
+                            <Button color="primary" style={{ backgroundColor: this.state.theme.dark }}
+
+                                onClick={() => { this.toggleModal(); this.loggedIn() }}>Login!</Button>{' '}
+                        </Link>
+                    </ModalFooter>
+                </Modal>
             </div>
         );
     }

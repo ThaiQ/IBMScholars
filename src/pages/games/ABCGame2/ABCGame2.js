@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import UserNavbar from "../../../components/navbar/navbar";
 import Board from "../../../components/boards-cards/board";
 import Card from "../../../components/boards-cards/card";
-import { Button } from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import "./ABCGame2.css";
 import { Link } from "react-router-dom";
 const { AutismColors } = require('../../../const')
@@ -37,7 +37,9 @@ export default class ABCGame2 extends Component {
           id: "card-c-word",
           word: "Cat"
         }
-      ]
+      ],
+      modal: false,
+      msg: '',
     };
   }
 
@@ -58,7 +60,7 @@ export default class ABCGame2 extends Component {
     var cWordCard = document.getElementById("card-c-word");
 
     if (aBoardArr.length > 3 || bBoardArr.length > 3 || cBoardArr.length > 3) {
-      return alert("Oops! Too many cards per picture!");
+      return this.toggleModal('Oops! Too many cards per picture!')
     }
 
     if (
@@ -69,9 +71,14 @@ export default class ABCGame2 extends Component {
       !cBoardArr.includes(cCard) ||
       !cBoardArr.includes(cWordCard)
     ) {
-      return alert("Oops, almost! Try Again.");
+      return this.toggleModal('Oops, almost! Try Again.')
     } else {
-      return alert("Congrats! You've completed the game!");
+      let usr = JSON.parse(localStorage.getItem("user"));
+      localStorage.setItem('user', JSON.stringify({
+        ...usr,
+        points: usr.points + 50
+      }))
+      return this.toggleModal("Congrats! You've completed the game! +50 points")
     }
   }
 
@@ -82,6 +89,12 @@ export default class ABCGame2 extends Component {
   initTheme() {
     let theme = JSON.parse(localStorage.getItem('theme'))
     theme && this.setState({ theme: theme })
+  }
+
+  toggleModal(msg) {
+    this.setState({msg: msg||''}, ()=> {
+      this.setState({ modal: !this.state.modal })
+    })
   }
 
   render() {
@@ -140,9 +153,11 @@ export default class ABCGame2 extends Component {
               />
             </Board>
           </main>
-          <Button className="the-btns">
-            <Link to="autism" id='game2-submit'>Back</Link>
+          <Link to="autism" id='game2-submit'>
+            <Button className="the-btns">
+              Back
           </Button>
+          </Link>
           <Button
             onClick={() => {
               this.checkAnswers();
@@ -152,6 +167,17 @@ export default class ABCGame2 extends Component {
             Submit
           </Button>
         </div>
+
+        <Modal isOpen={this.state.modal} toggle={() => { this.toggleModal() }}>
+          <ModalBody>
+            {this.state.msg}
+          </ModalBody>
+          <ModalFooter>
+              <Button color="primary" style={{ backgroundColor: this.state.theme.dark }}
+                onClick={() => { this.toggleModal() }}>OK!</Button>{' '}
+          </ModalFooter>
+        </Modal>
+
       </div>
     );
   }

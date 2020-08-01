@@ -73,7 +73,8 @@ class Rewards extends Component {
             instructions: [
                 '1. Select A Prize',
                 '2. Check The Shopping Cart',
-            ]
+            ],
+            usr : JSON.parse(localStorage.getItem('user'))
         }
         this.getItem = this.getItem.bind(this);
         this.addItem = this.addItem.bind(this);
@@ -183,7 +184,7 @@ class Rewards extends Component {
                             <CircularProgressbar
                                 className='circle'
                                 value={value} maxValue={value * 1000}
-                                text={`${value * 100}` + 'PTS'}
+                                text={`${this.state.usr.points||0} PTS`}
                                 styles={buildStyles({
                                     pathColor: this.state.theme.normal,
                                     pathColor: this.state.theme.normal,
