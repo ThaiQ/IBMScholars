@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Component } from 'react';
 import axios from 'axios';
 import './ABCGame1.css';
-import { Row, Modal, Container, Label, Button } from 'reactstrap';
+import { Row, Modal, Container, Label, Button, ModalBody, ModalFooter  } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import Nav from '../../components/navbar/navbar'
 const { base_URL } = require('../../const')
@@ -40,7 +40,8 @@ class Game extends Component {
                 '1. Click "Play Sound!" button to listen to letter audio',
                 '2. Enter your response',
                 '3. Click "Submit" to check answer!'
-            ]
+            ],
+            msg : ''
         }
         this.generateLetter = this.generateLetter.bind(this);
         this.changeInput = this.changeInput.bind(this);
@@ -60,6 +61,10 @@ class Game extends Component {
         theme && this.setState({ theme: theme })
     }
 
+    toggleModal(msg) {
+        this.setState({msg: msg||''})
+    }
+
     //Function to randomly generate a letter, for the randomized audio
     generateLetter() {
         if (this.state.call < this.state.practiceChain.length * 4) {
@@ -73,7 +78,7 @@ class Game extends Component {
             }
         }
         else {
-            alert("You have reached the end!")
+            this.toggleModal('You have reached the end!')
         }
     }
 
@@ -96,16 +101,16 @@ class Game extends Component {
         }
 
         if (this.state.call === 7) {
-            alert("You have reached the end!");
+            this.toggleModal('You have reached the end!')
         }
 
         else if (this.state.input.toLowerCase() === this.state.letter.toLowerCase()) {
-            alert("Great Job!");
+            this.toggleModal('Great Job!')
             this.generateLetter();
         }
         else {
             this.setState({ call: this.state.call - 1 });
-            alert("Ooops, Please Try again!");
+            this.toggleModal('Ooops, Please Try again!')
         }
 
 
@@ -122,8 +127,6 @@ class Game extends Component {
     open() {
         this.setState({ showModal: true });
     }
-
-
 
     render() {
         return (
@@ -164,6 +167,7 @@ class Game extends Component {
                     </Container>
                 </Modal>
 
+                <p className='msg'>{this.state.msg}</p>
             </div>
 
         );

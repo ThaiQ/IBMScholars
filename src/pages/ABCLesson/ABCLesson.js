@@ -60,10 +60,6 @@ class ABCGame extends Component {
                 this.setState({ currentPosition: this.state.currentPosition + 1, alphaTick: 0 });
             }
         }
-        //alerts for edge cases when the students reaches the end
-        else {
-            alert("CONGRATS! You have reached the end");
-        }
         const nSound = new UIfx(btnSound);
         nSound.play();
         this.setState({ audioPath: base_URL + '/mp3/' + this.state.audioLetter[this.state.currentPosition] });
@@ -74,7 +70,6 @@ class ABCGame extends Component {
     previous() {
         //alerts for edge cases when the students tries illegal options
         if (this.state.currentPosition === 0) {
-            alert("You can't go back!!");
             this.setState({ currentPosition: 0 });
         }
         else if (this.state.alphaTick <= 2 && this.state.alphaTick !== 0) {

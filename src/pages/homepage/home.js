@@ -74,7 +74,7 @@ export default class Home extends Component {
               className="homepage-img"
               alt="homepage image"
             />
-            <div style={{ backgroundColor: this.state.theme.normal }} className="banner-text">
+            <div style={{ backgroundColor: this.state.theme.dark }} className="banner-text">
               <h1>About Us</h1>
               <hr />
               <p className='lead text-center'>

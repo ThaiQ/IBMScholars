@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import UserNavbar from "../../../components/navbar/navbar";
 import Board from "../../../components/boards-cards/board";
 import Card from "../../../components/boards-cards/card";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { Button, Modal, ModalBody, ModalFooter } from "reactstrap";
 import "./ABCGame2.css";
 import { Link } from "react-router-dom";
 const { AutismColors } = require('../../../const')
