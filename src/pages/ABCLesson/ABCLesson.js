@@ -6,7 +6,7 @@ import UIfx from 'uifx';
 import btnSound from "../sounds/state-change_confirm-up.wav";
 import Navbar from "../../components/navbar/navbar.js";
 const { base_URL } = require('../../const')
-const {AutismColors} = require('../../const')
+const { AutismColors } = require('../../const')
 //Creates a sample ABC lesson
 class ABCGame extends Component {
     constructor(props) {
@@ -28,9 +28,9 @@ class ABCGame extends Component {
 
     }
 
-    initTheme () {
+    initTheme() {
         let theme = JSON.parse(localStorage.getItem('theme'))
-        theme && this.setState({theme:theme})
+        theme && this.setState({ theme: theme })
     }
 
     //Function to create Audio component
@@ -45,7 +45,7 @@ class ABCGame extends Component {
     }
 
     componentDidMount() {
-        this.initTheme ()
+        this.initTheme()
         this.setState({ audioVal: this.state.alphabets[this.state.currentPosition].letterSound });
     }
 
@@ -89,22 +89,22 @@ class ABCGame extends Component {
 
         return (
             <div className="overview">
-                <Navbar lesson={()=>this.initTheme()}/>
-                <div className="game" style={{backgroundColor:this.state.theme.dark}}>
+                <Navbar lesson={() => this.initTheme()} />
+                <div className="game" style={{ backgroundColor: this.state.theme.dark }}>
                     <div className="option">
                         <div className="fields">
-                            <div className="field-block" style={{backgroundColor:this.state.theme.normal}}>
+                            <div className="field-block" style={{ backgroundColor: this.state.theme.normal }}>
                                 {this.state.alphabets[this.state.currentPosition].letter}
                             </div>
                         </div>
-                        <div className="buttons">
+                        <div className="buttons-row">
                             <a onClick={this.previous} className="button prev">Previous</a>
                             <a onClick={this.playSound} className="button sound">Play Sound
                         <img className="icon" src="https://i.imgur.com/VoGIU6b.png" /></a>
                             <a onClick={this.next} className="button next">Next!</a>
                         </div>
                         <div className="fields">
-                            <div className="field-block" style={{backgroundColor:this.state.theme.normal}}>
+                            <div className="field-block" style={{ backgroundColor: this.state.theme.normal }}>
                                 <div className="left-field">
                                     <div className={classNames('placeholder-span', { hide: showImage })}> Click Next to view Image</div>
                                     <img className={classNames('letter-image', { hide: !showImage })}
