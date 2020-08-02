@@ -1,10 +1,10 @@
 .reward-card-wrapper {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .img {
-    height: 178px;
+    height: 178px; 
 }
 
 .bold-header {
@@ -21,7 +21,7 @@
 
 .points-container {
     width: 100%;
-    padding: 30px;
+    padding: 10%;
     grid-area: right;
 }
 
@@ -31,7 +31,7 @@
 
 .reward-container {
     grid-area: main;
-    padding: 20px;
+    padding: 4%; 
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -43,7 +43,11 @@
     font-weight: lighter;
 }
 
-.card-header{
+.bold {
+    font-weight: bold !important;
+}
+
+.card-header {
     font-weight: lighter;
     font-size: 25px;
 }
