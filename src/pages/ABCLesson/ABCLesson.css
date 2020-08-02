@@ -11,6 +11,8 @@
     left: 0;
     bottom: 0;
     background-size: auto;
+    height: auto;
+    position: relative;
 }
 
 .option{
@@ -30,7 +32,7 @@
     display: flex;
     min-height: 240px;
     width: auto;
-    height: 450px;
+    height: 100%;
     padding: 1%;
     flex-direction: row;
     justify-content: center;
@@ -67,19 +69,29 @@
 }
 
 .letter-image{
-    width: 600px;
-    padding-left: 50%;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: auto;
+    min-height: 100px;
+     
 }
 
 .word{
     width: 600px;
     padding-left: 50%;
+    display: flex;
+    position: relative;
+    width: auto;
+    height: auto;
 }
 
-.buttons{
+.buttons-row{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: relative;
 }
 
 .button{
@@ -121,22 +133,12 @@
     background-color: #7cc94f;
     padding-left: 5%;
     padding-right: 5%;
+    
 }
 
 .sound{
     padding-left: 10%;
     padding-right: 10%;
-}
-
-.audio{
-    height: 10vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-audio{
-    filter: sepia(100%) saturate(400%) grayscale(0) contrast(200%) hue-rotate(49deg) invert(12%);
 }
 
 .next{
@@ -150,10 +152,15 @@ audio{
 }
 
 .prev, .next, .sound{
+    display: flex;
     color: black !important;
-    width: 250px;
+    min-width: 100px;
+    max-width: auto;
     padding-left: 10px;
     padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
 }
 
 .left-field{
