@@ -86,6 +86,8 @@ class ABCGame extends Component {
     render() {
         let showImage = this.state.alphaTick !== 0 ? true : false;
         let showWord = this.state.alphaTick === 2 ? true : false;
+        let len = this.state.alphabets[this.state.currentPosition].word.length
+        let str = this.state.alphabets[this.state.currentPosition].word.substring(1, len);
 
         return (
             <div className="overview">
@@ -93,7 +95,7 @@ class ABCGame extends Component {
                 <div className="game" style={{ backgroundColor: this.state.theme.dark }}>
                     <div className="option">
                         <div className="fields">
-                            <div className="field-block" style={{ backgroundColor: this.state.theme.normal }}>
+                            <div className="field-block" style={{ backgroundColor: this.state.theme.normal, color: this.state.theme.dark }}>
                                 {this.state.alphabets[this.state.currentPosition].letter}
                             </div>
                         </div>
@@ -114,7 +116,8 @@ class ABCGame extends Component {
                                 <div className="right-field">
                                     <div className={classNames('placeholder-span', { hide: showWord })}> Click Next to view Spelling</div>
                                     <div className={classNames('word', { hide: !showWord })}>
-                                        {this.state.alphabets[this.state.currentPosition].word.toUpperCase()}
+                                        <div className="first-char" style={{ color: this.state.theme.dark }}> {this.state.alphabets[this.state.currentPosition].word.charAt(0).toUpperCase()} </div>
+                                        {str}
                                     </div>
                                 </div>
                             </div>
