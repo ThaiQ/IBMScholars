@@ -73,6 +73,7 @@ class Rewards extends Component {
             instructions: [
                 '1. Select A Prize',
                 '2. Check The Shopping Cart',
+                'Note: POINTS = PTS'
             ],
             usr : JSON.parse(localStorage.getItem('user'))
         }
@@ -139,8 +140,8 @@ class Rewards extends Component {
     render() {
         return (
             <div className='parent-container' style={{ backgroundColor: this.state.theme.normal }}>
-                <div><UserNavbar reward={() => this.initTheme()} /></div>
-                <h2>REWARD</h2>
+                <UserNavbar reward={() => this.initTheme()} />
+                <h4>REWARD</h4>
                 <br></br>
                 <div className="grid-container">
                     <div className='reward-container'>
@@ -158,18 +159,17 @@ class Rewards extends Component {
                                                 }}
                                             >
                                                 SELECT ITEM
-                                </Button>
+                                            </Button>
                                         </div>
                                     </CardBody>
                                 </Card>
                             </div>
                         ))}
                     </div>
-
                     <div className="points-container" style={{ backgroundColor: this.state.theme.light }}>
                         <h1>
-                            Claim Your Reward  &emsp;
-                    </h1>
+                            Claim Your Reward  
+                        </h1>
                         <hr />
                         <div>
                             <h4 className='bold-header'>Instructions</h4>
@@ -197,10 +197,10 @@ class Rewards extends Component {
                         <div>
                             <p className='card-header'>Shopping Cart</p>
                             {this.state.itemInCart ? this.state.itemInCart.map((type, ind) =>
-                                <div key={ind}>
-                                    <Row className='shopping-list' >
-                                        <Col>{type.item}</Col>
-                                        <Col>{type.price} POINTS</Col>
+                                <div className='shopping-list' key={ind}> 
+                                <div>{type.item}</div>
+                                    <Row>
+                                        <Col>{type.price} PTS</Col>
                                         <button className='btn'
                                             onClick={() => this.deleteItem(type.item, type.id)}>
                                             <i className="fa fa-trash" />

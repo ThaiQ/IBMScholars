@@ -21,7 +21,7 @@
 .form-search {
     width: 32vw;
     height: 40px;
-    margin-left: 30px;
+    margin-left: 2%;
     float: left;
 }
 
@@ -35,10 +35,11 @@
     text-align: center;
     transition: all 0.5s;
     cursor: pointer;
-    font-size: 17px !important;
+    font-size: 13px !important;
+    padding: 9px !important;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     float: right;
-    margin-right: 3vw;
+    margin-right: 2%;
 }
   
 .ask-q-button span {
