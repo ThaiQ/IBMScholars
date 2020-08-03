@@ -1,9 +1,26 @@
+# About
+
+Epic education's backend is built from IBM - Sxpress Starter Appplication
+
+## Available Scripts to start the project
+
+In This directory (server/), you can:
+
+### `npm install`
+To install dependencies
+
+### `npm start`
+To start the node application
+
+### IBM Watson Text-To-Speech intergration:
+Read our integration at the [wiki page](https://github.com/ThaiQ/IBMScholars/wiki/Create-mp3-files-using-IBM-Cloud's-Watson-Text-To-Speech-service)
+
+
 ---
 
 copyright:
   years: 2020
 
----
 <p align="center">
     <a href="https://cloud.ibm.com">
         <img src="https://my1.digitalexperience.ibm.com/8304c341-f896-4e04-add0-0a9ae02473ba/dxdam/2d/2d559197-6763-4e47-a2cb-8f54c449ff26/ibm-cloud.svg" height="100" alt="IBM Cloud">
