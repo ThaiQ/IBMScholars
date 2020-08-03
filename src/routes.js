@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/homepage/home'
-import ABCLesson from './pages/ABCLesson/ABCLesson';
+import ABCLesson from './pages/games/ABCLesson/ABCLesson';
 import Reward from './pages/RewardPage/rewards';
 import Autism from './pages/Disabilities/Autism/autism';
 import ADHD from './pages/Disabilities/ADHD/adhd';
@@ -9,7 +9,7 @@ import ABCGame2 from './pages/games/ABCGame2/ABCGame2';
 import Forum from './pages/forum/forum';
 import SignUp from './pages/SignUp/signUp';
 import Login from './pages/Login/login';
-import Game from './pages/ABCGame1/ABCGame1'
+import Game from './pages/games/ABCGame1/ABCGame1'
 
 export default function Routes(props) {
 

@@ -16,8 +16,6 @@ import {
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import logo from "./footprint.png";
-import { render } from "@testing-library/react";
-import { link } from "fs";
 
 const { AutismColors, ADHDColors } = require("../../const");
 

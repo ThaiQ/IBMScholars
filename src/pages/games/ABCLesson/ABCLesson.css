@@ -71,12 +71,29 @@
 .letter-image{
     display: flex;
     position: relative;
-    width: 100%;
+    width: 70%;
     height: auto;
     max-width: auto;
     min-height: 100px;
     padding-left: 25%;
 }
+
+@media only screen and (max-width: 500px) {
+    .letter-image{
+        display: block;
+        width: 50vw;
+    }
+    .word {
+        display: block;
+        margin-left: 50px;
+    }
+    .fields{
+        display: block;
+    }
+    .field-block{
+        display: block;
+    }
+  }
 
 .word{
     padding-left: 50px;
@@ -89,6 +106,8 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 25%;
+    padding: 30%;
+    margin-top: 11%;
 }
 
 .buttons-row{

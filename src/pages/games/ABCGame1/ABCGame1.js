@@ -3,9 +3,8 @@ import axios from 'axios';
 import './ABCGame1.css';
 import { Row, Modal, Container, Label, Button, ModalBody, ModalFooter  } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import Nav from '../../components/navbar/navbar'
-const { base_URL } = require('../../const')
-const { AutismColors } = require('../../const')
+import Nav from '../../../components/navbar/navbar'
+const { base_URL, AutismColors } = require('../../../const')
 class Game extends Component {
     constructor(props) {
         super(props);

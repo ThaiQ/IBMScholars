@@ -3,10 +3,10 @@ import './ABCLesson.css';
 import alphabets from './alphabets.json'
 import classNames from 'classnames';
 import UIfx from 'uifx';
-import btnSound from "../sounds/state-change_confirm-up.wav";
-import Navbar from "../../components/navbar/navbar.js";
-const { base_URL } = require('../../const')
-const { AutismColors } = require('../../const')
+import btnSound from "../../sounds/state-change_confirm-up.wav";
+import Navbar from "../../../components/navbar/navbar.js";
+const { base_URL, AutismColors } = require('../../../const')
+
 //Creates a sample ABC lesson
 class ABCGame extends Component {
     constructor(props) {
