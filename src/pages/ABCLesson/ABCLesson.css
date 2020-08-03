@@ -75,6 +75,7 @@
     height: auto;
     max-width: auto;
     min-height: 100px;
+    padding-left: 25%;
 }
 
 .word{
@@ -87,6 +88,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    padding-bottom: 25%;
 }
 
 .buttons-row{
