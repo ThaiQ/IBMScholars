@@ -92,22 +92,12 @@ class SignUp extends Component {
                         <Row className = 'row'>
                             <Col>
                                 <Label>Year Born</Label>
-                                <Input
+                                <Input id = 'input-year'
                                     type = 'select'
                                     placeholder = 'year'
                                 >
                                     {this.state.years.map(renderYear)}
                                 </Input>
-                            </Col>
-                            <Col>
-                            <Label>Select Your Avatar</Label>
-                                    <Row>{this.state.avatars.map((type, ind) => (
-                                        <Col key = {ind}>
-                                            <Card className = 'avatar'>
-                                                <CardImg className = 'img-size' src = {type.img} />
-                                            </Card>
-                                        </Col>
-                                    ))}</Row>
                             </Col>
                         </Row>
                         <hr />
