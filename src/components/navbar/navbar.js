@@ -100,7 +100,6 @@ const UserNavbar = props => {
           href="/"
         >
           EPIC Education
-          <img id="logo-image" src={logo} alt={"eedu logo"} />
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
