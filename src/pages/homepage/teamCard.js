@@ -12,7 +12,7 @@ export default class TeamCard extends Component{
           <CardBody>
             <CardTitle>{this.props.creators.name}</CardTitle>
             <CardText font-size='50%'>Software Engineering @ SJSU</CardText>
-            <Link href={this.props.creators.Linkedin}><i class="fa fa-linkedin"></i></Link>
+            <a href={this.props.creators.Linkedin} target="_blank"><i class="fa fa-linkedin"></i></a>
           </CardBody>
         </Card>
       </div>
